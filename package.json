@@ -1,0 +1,41 @@
+{
+  "name": "UNTITLED",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build:sass": {
+      "patterns": [
+        "./src/sass/*",
+        "./src/sass/components/*",
+        "./src/sass/pages/*"
+      ],
+      "extensions": "scss"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch",
+    "concat:components": "globcat   ./src/sass/components/*.scss -o ./build/styles/components.concat.scss",
+    "concat:pages": "globcat   ./src/sass/pages/*.scss -o ./build/styles/pages.concat.scss",
+    "concat:sass": "globcat  -o ./build/styles/styles.concat.scss  ./src/sass/_reset.scss ./src/sass/_variables.scss ./src/sass/_mixins.scss ./src/sass/general_styles.scss ./build/styles/components.concat.scss ./build/styles/pages.concat.scss",
+    "compile:sass": "node-sass ./build/styles/styles.concat.scss  ./wp-content/themes/UNTITLED/assets/css/styles.css ",
+    "build:sass": "npm-run-all concat:components concat:sass compile:sass",
+    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" ./wp-content/themes/UNTITLED/assets/css/styles.css -o ./build/styles/style.prefix.css",
+    "compress:css": "node-sass build/styles/style.prefix.css wp-content/themes/UNTITLED/assets/css/styles-compressed.css --output-style compressed",
+    "finalise:css": "npm-run-all concat:components concat:sass compile:sass prefix:css compress:css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "compress-css": "0.0.8",
+    "concat": "^1.0.3",
+    "globcat": "^1.2.2",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0",
+    "postcss-cli": "^6.1.3",
+    "prefix-css": "0.0.6"
+  }
+}

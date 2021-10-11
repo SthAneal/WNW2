@@ -1,0 +1,48 @@
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+
+@mixin fluid-prop-full($min_width, $max_width, $property, $min-val, $max-val) {
+    #{$property}: $min-val;
+    @media screen and (min-width: $min_width) {
+        #{$property}: calc(#{$min-val} + #{strip-unit($max-val - $min-val)} * ((100vw - #{$min_width}) / #{strip-unit($max_width - $min_width)}));
+    }
+    @media screen and (min-width: $max_width) {
+      #{$property}: $max-val;
+    }
+}
+
+@mixin fluid-prop($property, $min-val, $max-val) {
+  @include fluid-prop-full($min_content_width, $max_content_width, $property, $min-val, $max-val)
+}
+
+@mixin killlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+  > * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@mixin transition($property) {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-property: #{$property};
+}
+
+@mixin wp-admin-fix {
+  body.admin-bar & {
+    border-top: 32px solid transparent;
+    @media screen and (max-width: 782px) {
+      border-top-width: 46px;
+    }
+    // @media screen and (max-width: 600px) {
+    //   border-top-width: 0;
+    // }
+  }
+}
