@@ -20,10 +20,10 @@
     "concat:pages": "globcat   ./src/sass/pages/*.scss -o ./build/styles/pages.concat.scss",
     "concat:sass": "globcat  -o ./build/styles/styles.concat.scss  ./src/sass/_reset.scss ./src/sass/_variables.scss ./src/sass/_mixins.scss ./src/sass/general_styles.scss ./build/styles/components.concat.scss ./build/styles/pages.concat.scss",
     "compile:sass": "node-sass ./build/styles/styles.concat.scss  ./wp-content/themes/UNTITLED/assets/css/styles.css ",
-    "build:sass": "npm-run-all concat:components concat:sass compile:sass",
+    "build:sass": "npm-run-all concat:components concat:pages concat:sass compile:sass",
     "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" ./wp-content/themes/UNTITLED/assets/css/styles.css -o ./build/styles/style.prefix.css",
     "compress:css": "node-sass build/styles/style.prefix.css wp-content/themes/UNTITLED/assets/css/styles-compressed.css --output-style compressed",
-    "finalise:css": "npm-run-all concat:components concat:sass compile:sass prefix:css compress:css"
+    "finalise:css": "npm-run-all concat:components concat:sass concat:pages compile:sass prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",

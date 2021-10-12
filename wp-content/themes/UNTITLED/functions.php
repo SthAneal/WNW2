@@ -1,11 +1,9 @@
 <?php
-/**
- * Register and Enqueue Styles.
- */
+
 $site_key = 'UNTITLED';
 
-foreach (explode(" ", "") as $req) {
-	require 'inc/'.$req.'.php';
+foreach (explode(" ", "plugins") as $req) {
+	require_once 'inc/'.$req.'.php';
 }
 
 wp_cache_add_non_persistent_groups( array( 'woocommerce' ) );
@@ -15,13 +13,12 @@ add_filter('wpcf7_autop_or_not', '__return_false');
  * Register and Enqueue Styles.
  */
 function pm_register_styles() {
-
+	global $site_key;
 	wp_enqueue_style( $site_key.'-style', get_template_directory_uri() . '/assets/css/styles.css', array(), 1.0 ); //-compressed
 
 	foreach (explode(" ", "svg_replace ux") as $script) { //FUCKilla
 		wp_enqueue_script( $site_key.'-'.$script, get_stylesheet_directory_uri() . '/assets/scripts/'.$script.'.js', array( 'jquery' ) );
 	}
-
 }
 
 add_action( 'wp_enqueue_scripts', 'pm_register_styles' );
@@ -30,7 +27,6 @@ add_action( 'wp_enqueue_scripts', 'pm_register_styles' );
 add_action( 'after_setup_theme', function() {
 	add_theme_support( 'woocommerce' );
   // add_image_size('product-thumbnail', 260, 260, true);
-
 } );
 
 
