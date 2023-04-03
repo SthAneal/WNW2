@@ -4,7 +4,7 @@ services:
   db:
    image: mysql:5.7
    volumes:
-     - dbL_data:/var/lib/mysql
+     - db_data:/var/lib/mysql
    restart: always
    environment:
      MYSQL_ROOT_PASSWORD: root
@@ -40,7 +40,7 @@ services:
 
 
 volumes:
-    dbL_data: 
+    db_data: 
       driver: local
       driver_opts:
         o: bind
