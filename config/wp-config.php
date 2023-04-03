@@ -40,19 +40,19 @@
 
 
 
-if (ENVIRONMENT === 'staging') {
-	define( 'DB_HOST', 'mysqlm.studiocoast.com.au');
-	define( 'DB_PASSWORD', 'rain8waterfalldrink');
-	define( 'DB_USER', 'hststg');
-	define( 'DB_NAME', 'hststg');
-} else if (ENVIRONMENT === 'local' || ENVIRONMENT === 'development') {
+// if (ENVIRONMENT === 'staging') {
+	// define( 'DB_HOST', 'mysqlm.studiocoast.com.au');
+	// define( 'DB_PASSWORD', 'rain8waterfalldrink');
+	// define( 'DB_USER', 'hststg');
+	// define( 'DB_NAME', 'hststg');
+// } else if (ENVIRONMENT === 'local' || ENVIRONMENT === 'development') {
 	define( 'DB_NAME', 'hst');
 	define( 'DB_USER', 'wordpress');
 	define( 'DB_PASSWORD', 'wordpress');
 	define( 'DB_HOST', 'db:3306');
-	define( 'WP_DEBUG', true );
+// 	define( 'WP_DEBUG', true );
 	define( 'FS_METHOD', 'direct' );
-}
+// }
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8');
 
