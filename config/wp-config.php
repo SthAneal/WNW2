@@ -46,7 +46,7 @@
 	// define( 'DB_USER', 'hststg');
 	// define( 'DB_NAME', 'hststg');
 // } else if (ENVIRONMENT === 'local' || ENVIRONMENT === 'development') {
-	define( 'DB_NAME', 'hst');
+	define( 'DB_NAME', 'wnw');
 	define( 'DB_USER', 'wordpress');
 	define( 'DB_PASSWORD', 'wordpress');
 	define( 'DB_HOST', 'db:3306');
