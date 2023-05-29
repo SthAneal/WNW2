@@ -1,6 +1,6 @@
 <?php
 
-$site_key = 'W&W';
+$site_key = 'WNW';
 
 foreach (explode(" ", "plugins") as $req) {
 	require_once 'inc/'.$req.'.php';
