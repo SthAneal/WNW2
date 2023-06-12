@@ -6,7 +6,6 @@ foreach (explode(" ", "plugins") as $req) {
 	require_once 'inc/'.$req.'.php';
 }
 
-wp_cache_add_non_persistent_groups( array( 'woocommerce' ) );
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 /**
@@ -14,29 +13,25 @@ add_filter('wpcf7_autop_or_not', '__return_false');
  */
 function pm_register_styles() {
 	global $site_key;
-	wp_enqueue_style( $site_key.'-style', get_template_directory_uri() . '/assets/css/styles.css', array(), 1.0 ); //-compressed
+	wp_enqueue_style( $site_key.'-style', get_template_directory_uri() . '/assets/css/styles.css', array(), 1.0 );
 
-	foreach (explode(" ", "svg_replace ux") as $script) { //FUCKilla
+	foreach (explode(" ", "ux") as $script) {
 		wp_enqueue_script( $site_key.'-'.$script, get_stylesheet_directory_uri() . '/assets/scripts/'.$script.'.js', array( 'jquery' ) );
 	}
 }
 
 add_action( 'wp_enqueue_scripts', 'pm_register_styles' );
 
-
 add_action( 'after_setup_theme', function() {
 	add_theme_support( 'woocommerce' );
   // add_image_size('product-thumbnail', 260, 260, true);
 } );
 
-
-
-
 function path_to($file, $do_echo = true) {
 	$stubs = array(
-		'/^images/' => 'assets/media/images',
-		'/^icons/' => 'assets/media/icons',
-		'/^videos/' => 'assets/media/videos'
+		'/^images/' => 'assets/images',
+		'/^icons/' => 'assets/icons',
+		'/^videos/' => 'assets/videos'
 	);
  	$rtn = get_template_directory_uri().'/'.preg_replace(array_keys($stubs), array_values($stubs), $file);
 	if ($do_echo) {
@@ -45,10 +40,6 @@ function path_to($file, $do_echo = true) {
 		return $rtn;
 	}
 }
-
-
-
-
 
 function acf_image($name, $className = '', $size, $id = -1) {
 	$rtn = '';
