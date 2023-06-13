@@ -14,11 +14,13 @@ body {
   line-height: 18px;
   min-height: 100vh;
   min-height: 100dvb;
-  background-color: rgba(74, 57, 51, 0);
-  animation-name: backgroundFadeOut;
+}
+body > *:not(header.main) {
+  opacity: 0;
+  animation-name: fadeIn;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  animation-delay: 4s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -38,12 +40,20 @@ h3 {
   padding: 0 15px;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes zoomOut {
   0% {
     transform: translateY(40vh) scale(2.5);
   }
   100% {
-    transform: translateY(0vh) scale(1);
+    transform: translateY(0vh) scale(1.1);
   }
 }
 @keyframes leftToRight {
@@ -64,11 +74,57 @@ h3 {
 }
 @keyframes backgroundFadeOut {
   0% {
-    background-color: rgba(74, 57, 51, 0);
+    background-color: rgba(46, 41, 37, 0.568627451);
   }
   100% {
-    background-color: #4A3933;
+    background-color: #fff;
   }
+}
+@keyframes fixedToTop {
+  0% {
+    top: -100;
+  }
+  100% {
+    top: 0;
+  }
+}
+header.main {
+  padding: 25px 0 20px;
+}
+header.main.fixed {
+  position: fixed;
+  top: -265px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 2;
+  animation-name: fixedToTop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+header.main.fixed .logo > img:last-of-type {
+  display: none;
+}
+header.main::before, header.main::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+header.main::before {
+  border-top: 4px solid blue;
+  left: -120%;
+  animation-name: leftToRight;
+}
+header.main::after {
+  border-top: 4px solid #ff0810;
+  right: -120%;
+  animation-name: rightToLeft;
 }
 header.main nav {
   display: flex;
@@ -80,23 +136,42 @@ header.main nav a {
   flex: 1 1 fit-content;
   display: flex;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 24px;
+  text-transform: capitalize;
+  font-size: 21px;
   font-weight: 600;
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #F0A500;
+  color: #4A3933;
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-delay: 5s;
   animation-fill-mode: forwards;
 }
-header.main nav a:nth-child(1), header.main nav a:nth-child(2), header.main nav a:nth-child(3) {
+header.main nav a:hover {
+  color: #F0A500;
+}
+header.main nav a:nth-child(1) {
   left: -120%;
   animation-name: leftToRight;
 }
-header.main nav a:nth-child(5), header.main nav a:nth-child(6), header.main nav a:nth-child(7) {
+header.main nav a:nth-child(2) {
+  left: -120%;
+  animation-name: leftToRight;
+}
+header.main nav a:nth-child(3) {
+  left: -120%;
+  animation-name: leftToRight;
+}
+header.main nav a:nth-child(5) {
+  right: -120%;
+  animation-name: rightToLeft;
+}
+header.main nav a:nth-child(6) {
+  right: -120%;
+  animation-name: rightToLeft;
+}
+header.main nav a:nth-child(7) {
   right: -120%;
   animation-name: rightToLeft;
 }
@@ -113,6 +188,9 @@ header.main nav a.logo {
 header.main nav a.logo img {
   width: 100%;
   flex: 1 1 auto;
+}
+header.main nav a.logo img:first-child {
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.1843137255));
 }
 header.main nav a.logo button {
   display: none;
@@ -146,6 +224,34 @@ header.main nav img {
   header.main nav a.logo button {
     display: flex;
   }
+}
+
+main {
+  height: 200dvb;
+  position: relative;
+}
+main .video-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvb;
+}
+main .video-wrapper #featureVideo {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+main .video-wrapper div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(6, 6, 6, 0.3379945728) 100%);
 }
 
 /*# sourceMappingURL=styles.css.map */

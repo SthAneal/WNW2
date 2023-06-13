@@ -30,16 +30,16 @@
 	?>
 	<header class="main">
 		<nav class="container">
-			<a href="/#about">About us</a>
-			<a href="/#service">Services</a>
-			<a href="/#hours">Hours</a>
+			<a href="/#about">about us</a>
+			<a href="/#service">services</a>
+			<a href="/#hours">hours</a>
 			<a href="/" class="logo">
 				<img src="<?php path_to('images/logo-text.png') ?>" alt="whiskey & whiskers" />
 				<img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" />
 				<button>=</button>
 			</a>
-			<a href="/#products">Products</a>
-			<a href="/#gallery">Gallery</a>
-			<a href="/#contact">Contact</a>
+			<a href="/#products">products</a>
+			<a href="/#gallery">gallery</a>
+			<a href="/#contact">contact</a>
 		</nav>
 	</header>

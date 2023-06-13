@@ -9,12 +9,21 @@ body {
     min-height: 100vh;
     min-height: 100dvb;
 
-    background-color: #4a393300;
-    animation-name: backgroundFadeOut;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
+    // background-color: #2e292591;
+    // animation-name: backgroundFadeOut;
+    // animation-duration: 2s;
+    // animation-iteration-count: 1;
+    // animation-delay: 4s;
+    // animation-fill-mode: forwards;
+
+    >*:not(header.main) {
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 7s;
+        animation-fill-mode: forwards;
+    }
 }
 
 h2 {
@@ -33,13 +42,23 @@ h3 {
     padding: 0 15px;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes zoomOut {
     0% {
         transform: translateY(40vh) scale(2.5);
     }
 
     100% {
-        transform: translateY(0vh) scale(1);
+        transform: translateY(0vh) scale(1.1);
     }
 }
 
@@ -65,10 +84,20 @@ h3 {
 
 @keyframes backgroundFadeOut {
     0% {
-        background-color: #4a393300;
+        background-color: #2e292591;
     }
-    
+
     100% {
-        background-color: $color-primary;
+        background-color: #fff;
+    }
+}
+
+@keyframes fixedToTop {
+    0% {
+        top: -100;
+    }
+
+    100% {
+        top: 0;
     }
 }
