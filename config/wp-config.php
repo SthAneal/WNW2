@@ -19,7 +19,7 @@
  */
 
  $environments = array(
-   'local'       => 'localhost:8000 james-notebook:8000',
+   'local'       => 'localhost:8000 devpc:8000 anilpc:8000',
    'development' => '192.168.121.',
    'staging'     => 'staging.bettamilk.com.au',
    'production'  => ''

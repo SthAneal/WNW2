@@ -1,9 +1,21 @@
 /* ---- site variables ---- */
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
 
-$titillium: 'Titillium Web', sans-serif;
-$color-primary: #4A3933;
-$color-secondary:#F0A500;
-$color-tertiary:#E45826;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&family=Merriweather:wght@400;700&display=swap');
 
-$feature-video-overlay: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(6,6,6,0.3379945728291317) 100%);
+
+
+
+// $titillium: 'Titillium Web', sans-serif;
+$merriweather: 'Merriweather', serif;
+$merriweatherSans: 'Merriweather Sans', sans-serif;
+
+$color-primary: #4A3933;
+$color-secondary: #F0A500;
+$color-tertiary: #E45826;
+$color-header-before: #6666a1;
+$color-header-after: #dd6161;
+
+
+$intro-overlay: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(6, 6, 6, 0.3379945728291317) 100%);
+$intro-overlay-reverse: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(6, 6, 6, 0.3379945728291317) 100%);

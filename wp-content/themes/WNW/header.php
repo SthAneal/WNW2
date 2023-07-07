@@ -22,9 +22,11 @@
 	  gtag('config', 'UA-');
 	</script> -->
 
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="container">
 	<?php
 	wp_body_open();
 	?>
@@ -35,8 +37,7 @@
 			<a href="/#hours">hours</a>
 			<a href="/" class="logo">
 				<img src="<?php path_to('images/logo-text.png') ?>" alt="whiskey & whiskers" />
-				<img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" />
-				<button>=</button>
+				<!-- <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" /> -->
 			</a>
 			<a href="/#products">products</a>
 			<a href="/#gallery">gallery</a>

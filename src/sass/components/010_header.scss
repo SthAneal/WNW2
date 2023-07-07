@@ -1,6 +1,8 @@
 header.main {
     padding: 25px 0 20px;
-
+    position: relative;
+    // position: fixed;
+    z-index: 99;
     // border-top: 4px solid #ff0810;
     &.fixed {
         position: fixed;
@@ -8,16 +10,15 @@ header.main {
         left: 0px;
         right: 0px;
         background-color: #fff;
-        z-index: 2;
 
         animation-name: fixedToTop;
         animation-duration: 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
 
-        .logo > img:last-of-type{
-            display: none;
-        }
+        // .logo > img:last-of-type{
+        //     display: none;
+        // }
     }
 
     &::before,
@@ -25,7 +26,7 @@ header.main {
         content: '';
         width: 50%;
         position: absolute;
-        top: 0px;
+        bottom: 0px;
         animation-duration: 2s;
         animation-iteration-count: 1;
         animation-delay: 5s;
@@ -33,14 +34,14 @@ header.main {
     }
 
     &::before {
-        border-top: 4px solid blue;
+        border-top: 6px solid $color-header-before;
         // right: 0;
         left: -120%;
         animation-name: leftToRight;
     }
 
     &::after {
-        border-top: 4px solid #ff0810;
+        border-top: 6px solid $color-header-after;
         // left: 0;
         right: -120%;
         animation-name: rightToLeft;
@@ -57,12 +58,15 @@ header.main {
             display: flex;
             text-decoration: none;
             text-transform: capitalize;
-            font-size: 21px;
+            font-family: $merriweather;
+            font-size: 16px;
             font-weight: 600;
+            text-transform: uppercase;
             justify-content: center;
             align-items: center;
             position: relative;
             color: $color-primary;
+            letter-spacing: 1px;
 
             animation-duration: 2s;
             animation-iteration-count: 1;
@@ -159,9 +163,9 @@ header.main {
                     flex-direction: row;
                     justify-content: space-between;
 
-                    img:last-of-type {
-                        display: none;
-                    }
+                    // img:last-of-type {
+                    //     display: none;
+                    // }
 
                     button {
                         display: flex;
