@@ -18,10 +18,9 @@ get_header();
   </section>
 
   <section id="about">
-    <div>
-      <h2 class="main">About us</h2>
-
+    <div class="container">
       <div>
+        <h2 class="main">About us</h2>
         <p>Whiskey & Whiskers Barbershop is a High quality barbershop with master barbers providing high quality
           professional haircuts, beard trims and hot towel services for all aged groups people. We are specialised on
           Skin
@@ -41,13 +40,11 @@ get_header();
         </p>
       </div>
 
-      <div>
+      <div class="shadow">
         <img src="<?php path_to('images/intro.jpeg') ?>" alt="a happy customer after haircut" />
       </div>
-
-
-
     </div>
+
     <div>
       <div>
         <img class="thumbnail" src="<?php path_to('images/about_bg.jpg') ?>" alt="about_bg.jpg" />
@@ -57,33 +54,126 @@ get_header();
 
 
   <section id="service">
-    <div>
-      <div>
-        <h2 class="main">Services</h2>
+    <div class="container">
+      <h2 class="main">Services</h2>
+      <div class="services">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid vero? At certe gravius. Sint
-          ista
-          Graecorum; Nos cum te, M. Praeteritis, inquit, gaudeo. Duo Reges: constructio interrete.
-        </p>
+        <dl>
+          <dt class="trimmer">Standard cut</dt>
+          <dd>Give yourself a classic look with our standard hair cut. It ranges from size 1 and above and we provide
+            you with the exquisite comfort of hot towel.</dd>
+          <dd class="highlight">+ hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
 
-        <blockquote cite='http://loripsum.net'>
-          Et hi quidem ita non sola virtute finem bonorum contineri putant, ut rebus tamen omnibus
-          virtutem anteponant;
-        </blockquote>
+        <dl>
+          <dt class="scissor">Scissor cut</dt>
+          <dd>Embrace the scissor cut and elevate your style with its clean lines and refined charm.</dd>
+          <dd class="highlight">+ hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
 
+        <dl>
+          <dt class="trimmer">Buzz cut</dt>
+          <dd>This versatile hairstyle suits various face shapes and hair types, making it a practical and stylish choice for those seeking a hassle-free and edgy look.</dd>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $30
+          </dd>
+        </dl>
 
-        <ol>
-          <li>Odium autem et invidiam facile vitabis.</li>
-          <li>Negabat igitur ullam esse artem, quae ipsa a se proficisceretur;</li>
-          <li>Ex quo, id quod omnes expetunt, beate vivendi ratio inveniri et comparari potest.</li>
-          <li>Zenonem roges;</li>
-        </ol>
+        <dl>
+          <dt class="blade">Skin Fade</dt>
+          <dd>Its versatile nature allows for personalization and experimentation with different hairstyles while maintaining a low maintenance routine.</dd>
+          <dd class="highlight">0 & 0.5 fade + hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
 
+        <dl>
+          <dt class="trimmer">Taper Fade</dt>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
 
-        <p>Suam denique cuique naturam esse ad vivendum ducem. Haec dicuntur inconstantissime. Beatum,
-          inquit. Nihilo beatiorem esse Metellum quam Regulum. Bork <i>Praeclare hoc quidem.</i> </p>
+        <dl>
+          <dt class="scissor">Student cut</dt>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="scissor">Kids skin</dt>
+          <dd>Fade Cut</dd>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $35
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="beard">Beard</dt>
+          <dd>trimming and line up</dd>
+          <dd>straight razor</dd>
+          <dd class="price">
+            $25
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="razor">Standard cut & beard trim</dt>
+          <dd>line up (straight razor)</dd>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $55
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="razor">Skin Fade & Beard trim</dt>
+          <dd>beard line up (straight razor)</dd>
+          <dd class="highlight">0 and 0.5 fade cut</dd>
+          <dd class="price">
+            $55
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="trimmer">Head shave</dt>
+          <dd>Foil only</dd>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $30
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="razor">Face shave</dt>
+          <dd>Foil only</dd>
+          <dd class="highlight">hot towel</dd>
+          <dd class="price">
+            $30
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="dryer">Hair wash</dt>
+          <dd>blow dry</dd>
+          <dd class="price">
+            $10
+          </dd>
+        </dl>
+
       </div>
-
     </div>
 
     <div>

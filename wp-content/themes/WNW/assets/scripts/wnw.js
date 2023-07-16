@@ -116,9 +116,14 @@ jQuery(function ($) {
 
 jQuery(function ($) {
 	// const target = document.getElementById("group0");
-	const targets = document.querySelectorAll("#main > section");
+	// const targets = document.querySelectorAll("#main > section");
+
 
 	// const target = $("#group2");
+
+	const targets = document.querySelectorAll("#service .services > dl");
+
+
 
 	function callback(entries, observer) {
 		entries.forEach((entry) => {
@@ -126,11 +131,11 @@ jQuery(function ($) {
 				// console.log("Fully visible");
 				// console.log("entering");
 				entry.target.classList.add("fadeIn");
-				entry.target.classList.remove("fadeOut");
+				// entry.target.classList.remove("fadeOut");
 			} else {
 				// console.log("not fully visible");
-				entry.target.classList.add("fadeOut");
-				entry.target.classList.remove("fadeIn");
+				// entry.target.classList.add("fadeOut");
+				// entry.target.classList.remove("fadeIn");
 			}
 		});
 	}

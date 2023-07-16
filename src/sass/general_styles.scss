@@ -27,8 +27,8 @@ h2 {
         padding: 80px 0 50px;
         display: inline-block;
         filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
-        flex: 1 1 100%;
-        width: 100%;
+        width: fit-content;
+        height: fit-content;
 
         &::before {
             content: "";
@@ -49,7 +49,7 @@ h2 {
             position: absolute;
             left: 100%;
             top: 59%;
-            background-image: url(../images/icon-cutting-scissor.png);
+            background-image: url(../images/icons/icon-cutting-scissor.png);
             background-size: 100%;
         }
     }
@@ -65,7 +65,11 @@ h3 {
     // max-width: 1280px;
     width: clamp(320px, 80vw, 1280px);
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 15px;
+}
+
+.shadow{
+    filter: drop-shadow(4px 4px 7px black);
 }
 
 p{
@@ -92,13 +96,23 @@ p{
     }
 }
 
+// @keyframes zoomOut {
+//     0% {
+//         transform: translateY(40vh) scale(2.5);
+//     }
+
+//     100% {
+//         transform: translateY(0vh) scale(1.1);
+//     }
+// }
+
 @keyframes zoomOut {
     0% {
-        transform: translateY(40vh) scale(2.5);
+        transform: scale(2.1);
     }
 
     100% {
-        transform: translateY(0vh) scale(1.1);
+        transform: scale(1.1);
     }
 }
 
@@ -146,6 +160,6 @@ p{
     animation-name: fadeIn;
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }

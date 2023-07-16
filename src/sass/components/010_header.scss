@@ -1,24 +1,17 @@
 header.main {
     padding: 25px 0 20px;
     position: relative;
-    // position: fixed;
     z-index: 99;
-    // border-top: 4px solid #ff0810;
     &.fixed {
         position: fixed;
         top: -265px;
         left: 0px;
         right: 0px;
         background-color: #fff;
-
         animation-name: fixedToTop;
         animation-duration: 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-
-        // .logo > img:last-of-type{
-        //     display: none;
-        // }
     }
 
     &::before,
@@ -35,7 +28,6 @@ header.main {
 
     &::before {
         border-top: 6px solid $color-header-before;
-        // right: 0;
         left: -120%;
         animation-name: leftToRight;
     }
@@ -57,7 +49,6 @@ header.main {
             flex: 1 1 fit-content;
             display: flex;
             text-decoration: none;
-            text-transform: capitalize;
             font-family: $merriweather;
             font-size: 16px;
             font-weight: 600;
@@ -77,23 +68,6 @@ header.main {
                 color: $color-secondary;
             }
 
-
-            // &:nth-child(1),
-            // &:nth-child(2),
-            // &:nth-child(3) {
-            //     left: -120%;
-            //     animation-name: leftToRight;
-            // }
-
-
-            // &:nth-child(5),
-            // &:nth-child(6),
-            // &:nth-child(7) {
-            //     right: -120%;
-            //     animation-name: rightToLeft;
-            // }
-
-
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     left: -120%;
@@ -108,12 +82,11 @@ header.main {
                 }
             }
 
-
-
             &.logo {
                 flex: 1 1 150px;
                 flex-direction: column;
-                transform: translateY(40vh) scale(2.5);
+                // transform: translateY(40vh) scale(2.5);
+                transform: scale(2.1);
                 animation-name: zoomOut;
                 animation-duration: 3s;
                 animation-iteration-count: 1;
@@ -162,10 +135,6 @@ header.main {
                     order: -1;
                     flex-direction: row;
                     justify-content: space-between;
-
-                    // img:last-of-type {
-                    //     display: none;
-                    // }
 
                     button {
                         display: flex;
