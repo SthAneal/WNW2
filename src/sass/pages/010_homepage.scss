@@ -260,8 +260,37 @@ main {
 
         }
 
-        &#hours h2::before {
-            background-image: url(../images/icons/icon-opening-hours.png);
-        }
+        &#hours {
+            background-image: url('../images/bg_pattern-2.jpg');
+            background-size: 100px;
+
+            h2::before {
+                background-image: url(../images/icons/icon-opening-hours.png);
+            }
+
+            dl{
+                dt{
+                    @extend h3;
+                    margin-bottom: 16px;
+                }
+                
+                dd{
+                    @extend h2;
+                    margin-bottom: 32px;
+                    font-weight:700;
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            >div:first-child{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        } 
     }
 }

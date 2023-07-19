@@ -79,7 +79,8 @@ get_header();
 
         <dl>
           <dt class="trimmer">Buzz cut</dt>
-          <dd>This versatile hairstyle suits various face shapes and hair types, making it a practical and stylish choice for those seeking a hassle-free and edgy look.</dd>
+          <dd>This versatile hairstyle suits various face shapes and hair types, making it a practical and stylish
+            choice for those seeking a hassle-free and edgy look.</dd>
           <dd class="highlight">hot towel</dd>
           <dd class="price">
             $30
@@ -88,7 +89,8 @@ get_header();
 
         <dl>
           <dt class="blade">Skin Fade</dt>
-          <dd>Its versatile nature allows for personalization and experimentation with different hairstyles while maintaining a low maintenance routine.</dd>
+          <dd>Its versatile nature allows for personalization and experimentation with different hairstyles while
+            maintaining a low maintenance routine.</dd>
           <dd class="highlight">0 & 0.5 fade + hot towel</dd>
           <dd class="price">
             $35
@@ -112,7 +114,7 @@ get_header();
         </dl>
 
         <dl>
-          <dt class="scissor">Kids skin</dt>
+          <dt class="scissor">Kids cut</dt>
           <dd>Fade Cut</dd>
           <dd class="highlight">hot towel</dd>
           <dd class="price">
@@ -184,32 +186,15 @@ get_header();
   </section>
 
   <section id="hours">
-    <div>
-      <div>
-        <h2 class="main">Hours</h2>
+    <div class="container">
+      <h2 class="main">Hours</h2>
+      <dl>
+        <dt>Monday - Saturday</dt>
+        <dd>9:00 AM - 5:30 PM</dd>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid vero? At certe gravius. Sint
-          ista
-          Graecorum; Nos cum te, M. Praeteritis, inquit, gaudeo. Duo Reges: constructio interrete.
-        </p>
-
-        <blockquote cite='http://loripsum.net'>
-          Et hi quidem ita non sola virtute finem bonorum contineri putant, ut rebus tamen omnibus
-          virtutem anteponant;
-        </blockquote>
-
-
-        <ol>
-          <li>Odium autem et invidiam facile vitabis.</li>
-          <li>Negabat igitur ullam esse artem, quae ipsa a se proficisceretur;</li>
-          <li>Ex quo, id quod omnes expetunt, beate vivendi ratio inveniri et comparari potest.</li>
-          <li>Zenonem roges;</li>
-        </ol>
-
-
-        <p>Suam denique cuique naturam esse ad vivendum ducem. Haec dicuntur inconstantissime. Beatum,
-          inquit. Nihilo beatiorem esse Metellum quam Regulum. Bork <i>Praeclare hoc quidem.</i> </p>
-      </div>
+        <dt>Sunday</dt>
+        <dd>10:00 AM - 2:00 PM</dd>
+      </dl>
     </div>
     <div>
       <div>
