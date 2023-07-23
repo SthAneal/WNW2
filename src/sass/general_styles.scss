@@ -1,3 +1,8 @@
+:root{
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
 * {
     transition: all 0.2s linear;
 }
@@ -5,10 +10,7 @@
 body {
     font-family: $merriweatherSans;
     font-size: 16px;
-    line-height: 24px;
-    min-height: 100vh;
-    min-height: 100dvb;
-    scroll-behavior: smooth;
+    line-height: 28px;
 
     main>*:not(header.main) {
         opacity: 1;
@@ -63,10 +65,9 @@ h3 {
 }
 
 .container {
-    // max-width: 1280px;
     width: clamp(320px, 80vw, 1280px);
     margin: 0 auto;
-    padding: 15px;
+    padding: 40px 15px;
 }
 
 .shadow{

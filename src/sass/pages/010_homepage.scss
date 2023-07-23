@@ -57,8 +57,10 @@ main {
 
         p {
             width: clamp(320px, 80vw, 800px);
+            font-family: $merriweather;
             font-size: 18px;
             font-weight: 300;
+            line-height: 30px;
         }
 
     }
@@ -84,6 +86,7 @@ main {
                 position: absolute;
                 inset: 0;
                 clip: rect(0 auto auto 0);
+                filter: brightness(0.8);
             }
 
             img {
@@ -96,7 +99,10 @@ main {
         }
 
         &#about {
-            background-image: url('../images/bg_pattern.png');
+            // background-image: url('../images/bg_pattern.png');
+
+            background-image: url('../images/bg_pattern-2.jpg');
+            background-size: 100px;
 
             h2::before {
                 background-image: url(../images/icons/icon-about-us.png);
@@ -176,7 +182,7 @@ main {
                         margin-bottom: 20px;
                         position: relative;
 
-                        &::before{
+                        &::before {
                             content: '';
                             position: absolute;
                             width: 50px;
@@ -187,39 +193,40 @@ main {
                             filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
                         }
 
-                        &.trimmer::before{
+                        &.trimmer::before {
                             background-image: url(../images/icons/icon-trimmer.png);
                         }
 
-                        &.scissor::before{
+                        &.scissor::before {
                             background-image: url(../images/icons/icon-scissor.png);
                         }
 
-                        &.blade::before{
-                            background-image: url(../images/icons/icon-blade.png);                            
+                        &.blade::before {
+                            background-image: url(../images/icons/icon-blade.png);
                         }
 
-                        &.beard::before{
-                            background-image: url(../images/icons/icon-beard.png);                        
+                        &.beard::before {
+                            background-image: url(../images/icons/icon-beard.png);
                         }
 
-                        &.razor::before{
-                            background-image: url(../images/icons/icon-razor.png);                           
+                        &.razor::before {
+                            background-image: url(../images/icons/icon-razor.png);
                         }
 
-                        &.dryer::before{
-                            background-image: url(../images/icons/icon-dryer.png);                           
+                        &.dryer::before {
+                            background-image: url(../images/icons/icon-dryer.png);
                         }
                     }
 
                     dd {
                         color: #6666a1;
-                        &:not(.price, .highlight){
+
+                        &:not(.price, .highlight) {
                             margin-bottom: 10px;
                             font-weight: 300;
                         }
 
-                        &.highlight{
+                        &.highlight {
                             font-family: $merriweather;
                             font-size: 14px;
                             text-transform: capitalize;
@@ -268,29 +275,67 @@ main {
                 background-image: url(../images/icons/icon-opening-hours.png);
             }
 
-            dl{
-                dt{
-                    @extend h3;
-                    margin-bottom: 16px;
+            dl:first-of-type {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                flex-wrap: wrap;
+
+                div {
+                    max-width: 175px;
+                    padding: 20px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 4px;
+                    background-image: url(../images/bg_pattern.png);
+                    box-shadow: 0px 1px 4px -1px #6666a1;
                 }
+
+                dt {
+                    font-family: $merriweather;
+                    font-weight: 700;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+
+                dd {
+                    color: #F0A500;
+                }
+            }
+
+            dl:last-of-type {
                 
-                dd{
-                    @extend h2;
-                    margin-bottom: 32px;
-                    font-weight:700;
-                    &:last-of-type{
+                dt {
+                    font-size: 20px;
+                    font-family: $merriweather;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+
+                dd {
+                    margin-bottom: 30px;
+
+                    a {
+                        color: #6666a1;
+                    }
+
+                    &:last-of-type {
                         margin-bottom: 0;
                     }
                 }
             }
 
-            >div:first-child{
+            >div:first-child {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 20px;
             }
-        } 
+        }
     }
 }

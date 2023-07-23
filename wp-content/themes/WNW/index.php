@@ -188,12 +188,53 @@ get_header();
   <section id="hours">
     <div class="container">
       <h2 class="main">Hours</h2>
-      <dl>
-        <dt>Monday - Saturday</dt>
-        <dd>9:00 AM - 5:30 PM</dd>
 
-        <dt>Sunday</dt>
-        <dd>10:00 AM - 2:00 PM</dd>
+      <dl>
+        <div>
+          <dt>mon</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+
+        <div>
+          <dt>tues</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+
+        <div>
+          <dt>wed</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+
+        <div>
+          <dt>thur</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+
+        <div>
+          <dt>fri</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+
+        <div>
+          <dt>sat</dt>
+          <dd>9:00 AM - 5:30PM</dd>
+        </div>
+        <div>
+          <dt>Sun</dt>
+          <dd>10:00 AM - 2:00PM</dd>
+        </div>
+      </dl>
+
+      <dl>
+        <dt>visit us </dt>
+        <dd>
+          <a href="https://goo.gl/maps/pdoapPQsFM6iykhK7" target="_blank">
+            104 Murray St, Hobart TAS, 7000
+          </a>
+        </dd>
+
+        <dt>call us at</dt>
+        <dd><a href="tel:+61451147736">+61451147736</a></dd>
       </dl>
     </div>
     <div>
