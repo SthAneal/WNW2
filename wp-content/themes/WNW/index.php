@@ -4,17 +4,23 @@ get_header();
 <main id="main">
   <section class="intro">
 
-    <img src="<?php path_to('images/wnw-place.jpg') ?>" alt="wnw place">
+    <img src="<?php path_to('images/wnw-place.jpg') ?>" alt="wnw place" class="bg"/>
 
-    <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" />
+    <div class="container">
+      <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" class="logo-img"/>
+  
+      <div>
+        <h2>the utmost experience</h2>
+        <p>
+          Welcome to The Whiskey & Whiskers Barber Shop, where traditional grooming meets the fine taste of whiskey. Step
+          into a world where the art of barbering is elevated to an experience of utmost sophistication and indulgence.
+          Nestled in the heart of the city, our establishment combines the timeless rituals of men's grooming with the
+          pleasure of savoring a perfectly crafted whiskey.
+        </p>
+      </div>
+    </div>
 
-    <h2>the utmost experience</h2>
-    <p>
-      Welcome to The Whiskey & Whiskers Barber Shop, where traditional grooming meets the fine taste of whiskey. Step
-      into a world where the art of barbering is elevated to an experience of utmost sophistication and indulgence.
-      Nestled in the heart of the city, our establishment combines the timeless rituals of men's grooming with the
-      pleasure of savoring a perfectly crafted whiskey.
-    </p>
+
   </section>
 
   <section id="about">
@@ -40,8 +46,12 @@ get_header();
         </p>
       </div>
 
-      <div class="shadow">
-        <img src="<?php path_to('images/intro.jpeg') ?>" alt="a happy customer after haircut" />
+      <!-- <div class="shadow">
+        <img src="<?php //path_to('images/intro.png') ?>" alt="a happy customer after haircut" />
+      </div> -->
+
+      <div>
+        <img src="<?php path_to('images/intro.png') ?>" alt="a happy customer after haircut" />
       </div>
     </div>
 
@@ -55,7 +65,7 @@ get_header();
 
   <section id="service">
     <div class="container">
-      <h2 class="main">Services</h2>
+      <h2 class="main invert">Services</h2>
       <div class="services">
 
         <dl>
@@ -192,40 +202,40 @@ get_header();
       <dl>
         <div>
           <dt>mon</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dd><span>9:00 AM </span> <span>5:30 PM</span></dd>
         </div>
 
         <div>
-          <dt>tues</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dt>tue</dt>
+          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
         </div>
 
         <div>
           <dt>wed</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
         </div>
 
         <div>
-          <dt>thur</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dt>thu</dt>
+          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
         </div>
 
         <div>
           <dt>fri</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
         </div>
 
         <div>
           <dt>sat</dt>
-          <dd>9:00 AM - 5:30PM</dd>
+          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
         </div>
         <div>
           <dt>Sun</dt>
-          <dd>10:00 AM - 2:00PM</dd>
+          <dd><span>10:00 AM</span> <span>  2:00 PM</span></dd>
         </div>
       </dl>
 
-      <dl>
+      <!-- <dl>
         <dt>visit us </dt>
         <dd>
           <a href="https://goo.gl/maps/pdoapPQsFM6iykhK7" target="_blank">
@@ -235,7 +245,7 @@ get_header();
 
         <dt>call us at</dt>
         <dd><a href="tel:+61451147736">+61451147736</a></dd>
-      </dl>
+      </dl> -->
     </div>
     <div>
       <div>

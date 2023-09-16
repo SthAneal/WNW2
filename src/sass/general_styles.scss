@@ -12,6 +12,7 @@ body {
     font-size: 21px;
     font-weight: 400;
     line-height: 30px;
+    color: #12151a;
 
     main>*:not(header.main) {
         opacity: 1;
@@ -19,11 +20,10 @@ body {
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     text-transform: uppercase;
-    letter-spacing: 5px;
 
     &.main {
         color: #F0A500;
@@ -56,6 +56,11 @@ h2 {
             background-image: url(../images/icons/icon-cutting-scissor.png);
             background-size: 100%;
         }
+
+        &.invert::after, &.invert::before{
+            filter: invert(1);
+        }
+
     }
 }
 
@@ -66,7 +71,7 @@ h3 {
 }
 
 .container {
-    width: clamp(320px, 80vw, 1280px);
+    width: clamp(320px, 100%, 1280px);
     margin: 0 auto;
     padding: 40px 15px;
 }
