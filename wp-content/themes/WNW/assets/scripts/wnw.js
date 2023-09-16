@@ -39,7 +39,7 @@ jQuery(function ($) {
 
 jQuery(function ($) {
 	var images = document.querySelectorAll("img.thumbnail");
-	new simpleParallax(images, {scale:1.1});
+	new simpleParallax(images, {scale:1.5});
 });
 
 // jQuery(function ($) {

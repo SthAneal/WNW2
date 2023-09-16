@@ -57,9 +57,6 @@ main {
 
         p {
             width: clamp(320px, 80vw, 800px);
-            font-family: $merriweather;
-            font-size: 18px;
-            font-weight: 300;
             line-height: 30px;
         }
 
@@ -173,9 +170,7 @@ main {
                     dt {
                         display: flex;
                         align-items: center;
-                        font-family: $merriweather;
                         font-size: 24px;
-                        font-weight: 400;
                         min-height: 50px;
                         padding-left: 60px;
                         text-transform: capitalize;
@@ -223,14 +218,11 @@ main {
 
                         &:not(.price, .highlight) {
                             margin-bottom: 10px;
-                            font-weight: 300;
                         }
 
                         &.highlight {
-                            font-family: $merriweather;
                             font-size: 14px;
                             text-transform: capitalize;
-                            font-weight: 400;
                             background: #ffffff;
                             position: absolute;
                             left: 2px;
@@ -242,8 +234,6 @@ main {
                         }
 
                         &.price {
-                            font-family: $merriweather;
-                            font-weight: 400;
                             font-size: 20px;
                             width: 60px;
                             height: 60px;
@@ -295,7 +285,6 @@ main {
                 }
 
                 dt {
-                    font-family: $merriweather;
                     font-weight: 700;
                     font-size: 20px;
                     text-transform: uppercase;
@@ -311,7 +300,6 @@ main {
                 
                 dt {
                     font-size: 20px;
-                    font-family: $merriweather;
                     margin-bottom: 15px;
                     text-transform: uppercase;
                 }

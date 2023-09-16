@@ -44,14 +44,14 @@ header.main {
         justify-content: center;
         align-items: center;
         gap: 20px;
+        padding: 10px;
 
         a {
             flex: 1 1 fit-content;
             display: flex;
             text-decoration: none;
-            font-family: $merriweather;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             text-transform: uppercase;
             justify-content: center;
             align-items: center;
@@ -118,7 +118,7 @@ header.main {
 
     @media screen and (max-width:991px) {
         nav a {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 
