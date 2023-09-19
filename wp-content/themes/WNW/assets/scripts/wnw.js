@@ -122,7 +122,7 @@ jQuery(function ($) {
 	// const target = $("#group2");
 
 	const targets = document.querySelectorAll("#service .services > dl");
-
+	const hours = document.querySelectorAll("#hours dl > div");
 
 
 	function callback(entries, observer) {
@@ -130,7 +130,9 @@ jQuery(function ($) {
 			if (entry.isIntersecting) {
 				// console.log("Fully visible");
 				// console.log("entering");
+				// entry.target.classList.add("fadeInUp");
 				entry.target.classList.add("fadeIn");
+
 				// entry.target.classList.remove("fadeOut");
 			} else {
 				// console.log("not fully visible");
@@ -152,4 +154,6 @@ jQuery(function ($) {
 
 	// createObserver($(target), callback);
 	createObserver(targets, callback);
+
+	createObserver(hours, callback);
 });

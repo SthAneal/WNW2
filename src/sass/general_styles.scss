@@ -84,6 +84,18 @@ p{
     margin-bottom: 20px;
 }
 
+@keyframes fadeInUp {
+    0% {
+        // transform: translateY(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -162,6 +174,15 @@ p{
     100% {
         top: 0;
     }
+}
+
+.fadeInUp {
+    transform: translateY(25px);
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .fadeIn {

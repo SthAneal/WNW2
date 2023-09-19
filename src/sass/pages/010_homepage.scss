@@ -213,18 +213,19 @@ main {
                     align-items: center;
                     justify-content: center;
                     gap: 20px;
-                    font-size: 24px;
+                    font-size: 30px;
+                    font-weight: 500;
                     min-height: 50px;
                     text-transform: capitalize;
                     margin-bottom: 20px;
                     color: #6666a1;
+                    filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 
                     &::before {
                         content: '';
                         width: 50px;
                         height: 50px;
                         background-size: cover;
-                        filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
                     }
 
                     &.trimmer::before {
@@ -256,7 +257,8 @@ main {
                     // color: #6666a1;
 
                     &:not(.price, .highlight) {
-                        margin-bottom: 10px;
+                        margin-bottom: 25px;
+                        font-weight: 200;
                     }
 
                     &.highlight {
@@ -279,6 +281,7 @@ main {
                         background-size: 90px;
                         background-position: center;
                         font-size: 30px;
+                        filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
                     }
                 }
             }
@@ -323,6 +326,7 @@ main {
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: center;
+                    opacity: 0; // for fadeIn action
 
                     &:hover{
                         transform: scale(1.1);
@@ -333,15 +337,15 @@ main {
                     font-weight: 500;
                     font-size: 24px;
                     text-transform: uppercase;
-                    margin-bottom: 15px;
+                    margin-bottom: 10px;
                     color: #F0A500;
                 }
 
                 dd {
+                    font-size: 18px;
                     color: #ffffff;
                     display: flex;
                     flex-direction: column;
-                    gap: 5px;
                 }
             }
 

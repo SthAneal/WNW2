@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200;8..60,400;8..60,500;8..60,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -89,6 +88,15 @@ p {
   margin-bottom: 20px;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -145,6 +153,15 @@ p {
     top: 0;
   }
 }
+.fadeInUp {
+  transform: translateY(25px);
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 2s;
@@ -472,18 +489,19 @@ main .intro ~ section#service .services dt {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 500;
   min-height: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
   color: #6666a1;
+  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
 main .intro ~ section#service .services dt::before {
   content: "";
   width: 50px;
   height: 50px;
   background-size: cover;
-  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
 main .intro ~ section#service .services dt.trimmer::before {
   background-image: url(../images/icons/icon-trimmer.png);
@@ -504,7 +522,8 @@ main .intro ~ section#service .services dt.dryer::before {
   background-image: url(../images/icons/icon-dryer.png);
 }
 main .intro ~ section#service .services dd:not(.price, .highlight) {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  font-weight: 200;
 }
 main .intro ~ section#service .services dd.highlight {
   font-size: 18px;
@@ -525,6 +544,7 @@ main .intro ~ section#service .services dd.price {
   background-size: 90px;
   background-position: center;
   font-size: 30px;
+  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
 main .intro ~ section#service h2::before {
   background-image: url(../images/icons/icon-services.png);
@@ -560,6 +580,7 @@ main .intro ~ section#hours dl:first-of-type div {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  opacity: 0;
 }
 main .intro ~ section#hours dl:first-of-type div:hover {
   transform: scale(1.1);
@@ -568,14 +589,14 @@ main .intro ~ section#hours dl:first-of-type dt {
   font-weight: 500;
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #F0A500;
 }
 main .intro ~ section#hours dl:first-of-type dd {
+  font-size: 18px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 main .intro ~ section#hours > div:first-child {
   flex-direction: column;
