@@ -172,7 +172,8 @@ main {
         }
 
         &#service {
-            background-color: $color-primary;
+            // background-color: $color-primary;
+            background: $gradient-primary;
 
             >div:first-child {
                 flex-direction: column;
@@ -304,28 +305,49 @@ main {
                     background-image: url(../images/icons/icon-opening-hours.png);
                 }
             }
+            
+            h3{
+                margin-bottom: 40px;
+                position: relative;
+                color: #ffffff;
 
-            dl:first-of-type {
+                &::before, &::after{
+                    display: inline-block;
+                    font-size: 84px;
+                    font-weight: 700;
+                    position: absolute;
+                    top: 14px;
+                    color: #12151a;
+                }
+                
+                &::before{
+                    content: " “ ";
+                    left: -40px;
+                }
+
+                &::after{
+                    content: " ” ";
+                    right: -40px;
+                }
+            }
+
+            dl {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
-                margin-bottom: 50px;
                 flex-wrap: wrap;
 
                 div {
-                    width: 200px;
-                    height: 200px;
+                    width: 150px;
                     padding: 20px 10px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 4px;
-                    background-image: url(../images/hour-bg.svg);
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    background-position: center;
+                    border-radius: 10px;
+                    // background-color: $color-primary-fade;     
+                    background: $gradient-secondary;
                     opacity: 0; // for fadeIn action
 
                     &:hover{
@@ -346,36 +368,38 @@ main {
                     color: #ffffff;
                     display: flex;
                     flex-direction: column;
+
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        &::before, &::after{
+                            display: inline-block;
+                            font-size: 16px;
+                            font-weight: 200;
+                        }
+
+                        &:first-child{
+                            margin-bottom: 15px;
+                            &::before{
+                                content: 'OPEN';
+                            }
+                        }
+
+                        &:last-child::before{
+                            content: 'CLOSE';
+                        }
+                    }
                 }
             }
 
-            // dl:last-of-type {
-
-            //     dt {
-            //         font-size: 20px;
-            //         margin-bottom: 15px;
-            //         text-transform: uppercase;
-            //     }
-
-            //     dd {
-            //         margin-bottom: 30px;
-
-            //         a {
-            //             color: #6666a1;
-            //         }
-
-            //         &:last-of-type {
-            //             margin-bottom: 0;
-            //         }
-            //     }
-            // }
-
             >div:first-child {
+                display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                flex-wrap: wrap;
-                gap: 20px;
             }
         }
     }

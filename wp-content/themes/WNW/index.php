@@ -134,8 +134,7 @@ get_header();
 
         <dl>
           <dt class="beard">Beard</dt>
-          <dd>trimming and line up</dd>
-          <dd>straight razor</dd>
+          <dd>trimming and line up (straight razor)</dd>
           <dd class="price">
             $25
           </dd>
@@ -199,53 +198,63 @@ get_header();
     <div class="container">
       <h2 class="main">Hours</h2>
 
+      <h3> We are open everyday </h3>
       <dl>
         <div>
           <dt>mon</dt>
-          <dd><span>9:00 AM </span> <span>5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span> 
+            <span>5:30 pm</span>
+          </dd>
         </div>
 
         <div>
           <dt>tue</dt>
-          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span>
+            <span> 5:30 pm</span>
+          </dd>
         </div>
 
         <div>
           <dt>wed</dt>
-          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span> 
+            <span> 5:30 pm</span>
+          </dd>
         </div>
 
         <div>
           <dt>thu</dt>
-          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span>
+            <span> 5:30 pm</span>
+          </dd>
         </div>
 
         <div>
           <dt>fri</dt>
-          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span> 
+            <span> 5:30 pm</span>
+          </dd>
         </div>
 
         <div>
           <dt>sat</dt>
-          <dd><span>9:00 AM </span> <span> 5:30 PM</span></dd>
+          <dd>
+            <span>9:00 am </span> 
+            <span> 5:30 pm</span>
+          </dd>
         </div>
         <div>
           <dt>Sun</dt>
-          <dd><span>10:00 AM</span> <span>  2:00 PM</span></dd>
+          <dd>
+            <span>10:00 am</span> 
+            <span>  2:00 pm</span>
+          </dd>
         </div>
       </dl>
-
-      <!-- <dl>
-        <dt>visit us </dt>
-        <dd>
-          <a href="https://goo.gl/maps/pdoapPQsFM6iykhK7" target="_blank">
-            104 Murray St, Hobart TAS, 7000
-          </a>
-        </dd>
-
-        <dt>call us at</dt>
-        <dd><a href="tel:+61451147736">+61451147736</a></dd>
-      </dl> -->
     </div>
     <div>
       <div>
