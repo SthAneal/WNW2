@@ -39,7 +39,7 @@ jQuery(function ($) {
 
 jQuery(function ($) {
 	var images = document.querySelectorAll("img.thumbnail");
-	new simpleParallax(images, {scale:1.5});
+	new simpleParallax(images, { scale: 1.5 });
 });
 
 // jQuery(function ($) {
@@ -156,4 +156,16 @@ jQuery(function ($) {
 	createObserver(targets, callback);
 
 	createObserver(hours, callback);
+});
+
+jQuery(function ($) {
+	$('.bubble').parent().hover(function (e) {
+		var relX = e.pageX - $(this).offset().left;
+		var relY = e.pageY - $(this).offset().top;
+		// $(this).children('.bubble').css({"left":relX+"px", "top":relY+"px"});
+		$(this).css("overflow","hidden");
+		$(this).children('.bubble').css({"left":relX+"px", "top":relY+"px", "height":$(this).height() * 4, "width":$(this).width() * 4});
+	},function(){
+		$(this).children('.bubble').css({"height":"0px", "width":"0px"});
+	})
 });

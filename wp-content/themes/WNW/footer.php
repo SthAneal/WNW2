@@ -1,5 +1,5 @@
 <footer class="main">
-	<h2 class="main" id="contact">Contact</h2>
+	<h2 class="main" id="contact">Contact Us</h2>
 
 	<div class="map container">
 		<iframe
@@ -49,6 +49,10 @@
 				</a>
 			</div>
 		</div>
+	</div>
+
+	<div class="copy-rights">
+		<p>&copy; Copyright 2023 Whiskey & Whiskers Barber Shop - All Rights Reserved.</p>
 	</div>
 </footer>
 <?php wp_footer(); ?>

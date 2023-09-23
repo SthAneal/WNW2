@@ -43,6 +43,7 @@ h2.main {
   filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
   width: fit-content;
   height: fit-content;
+  letter-spacing: 5px;
 }
 h2.main::before {
   content: "";
@@ -86,8 +87,16 @@ h3 {
   filter: drop-shadow(4px 4px 7px black);
 }
 
-p {
-  margin-bottom: 20px;
+.bubble {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: width 0.6s ease, height 0.6s ease;
+  position: absolute;
+  background-color: #F0CF85;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 @keyframes fadeInUp {
@@ -309,7 +318,7 @@ footer.main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 0 0;
   background: linear-gradient(358deg, rgb(22, 22, 22) 0%, rgb(24, 24, 24) 50%, rgb(46, 46, 46) 100%);
 }
 footer.main h2::before, footer.main h2::after {
@@ -418,6 +427,14 @@ footer.main .touch > div a img {
 footer.main .touch > div a:hover {
   transform: scale(1.1);
 }
+footer.main .copy-rights {
+  width: 100%;
+  text-align: center;
+  padding: 50px 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+}
 @media screen and (max-width: 991px) {
   footer.main .touch {
     flex-direction: column;
@@ -474,6 +491,9 @@ main section.intro > div {
   align-items: center;
   column-gap: 3%;
   text-align: left;
+}
+main section.intro p {
+  margin-bottom: 20px;
 }
 main section.intro img.bg {
   position: absolute;
@@ -537,6 +557,9 @@ main .intro ~ section#about h2 {
 }
 main .intro ~ section#about h2::before {
   background-image: url(../images/icons/icon-about-us.png);
+}
+main .intro ~ section#about p {
+  margin-bottom: 20px;
 }
 main .intro ~ section#about > div:first-child {
   justify-content: space-between;
@@ -606,6 +629,7 @@ main .intro ~ section#service .services dl {
   opacity: 0;
   position: relative;
   box-shadow: 0px 1px 4px -1px #6666a1;
+  overflow: hidden;
 }
 main .intro ~ section#service .services dl:hover {
   transform: scale(1.01);
@@ -724,9 +748,11 @@ main .intro ~ section#hours dl div {
   border-radius: 10px;
   background: linear-gradient(0deg, rgb(22, 22, 22) 0%, rgb(24, 24, 24) 46%, rgb(46, 46, 46) 100%);
   opacity: 0;
+  color: #ffffff;
 }
 main .intro ~ section#hours dl div:hover {
   transform: scale(1.1);
+  color: #12151a;
 }
 main .intro ~ section#hours dl dt {
   font-weight: 500;
@@ -737,7 +763,6 @@ main .intro ~ section#hours dl dt {
 }
 main .intro ~ section#hours dl dd {
   font-size: 18px;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -766,6 +791,9 @@ main .intro ~ section#hours > div:first-child {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+main .intro ~ section#hours .bubble {
+  background-color: #ffffff;
 }
 @media screen and (max-width: 991px) {
   main section.intro > div {

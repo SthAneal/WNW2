@@ -65,26 +65,32 @@ get_header();
 
   <section id="service">
     <div class="container">
-      <h2 class="main invert">Services</h2>
+      <h2 class="main invert">Our Services</h2>
       <div class="services">
 
         <dl>
           <dt class="trimmer">Standard cut</dt>
-          <dd>Give yourself a classic look with our standard hair cut. It ranges from size 1 and above and we provide
-            you with the exquisite comfort of hot towel.</dd>
+          <dd>
+            <p>
+              Give yourself a classic look with our standard hair cut. It ranges from size 1 and above and we provide
+              you with the exquisite comfort of hot towel.
+            </p>
+          </dd>
           <dd class="highlight">+ hot towel</dd>
           <dd class="price">
-            $35
+            <p>$35</p>
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
           <dt class="scissor">Scissor cut</dt>
-          <dd>Embrace the scissor cut and elevate your style with its clean lines and refined charm.</dd>
-          <dd class="highlight">+ hot towel</dd>
+          <dd><p>Embrace the scissor cut and elevate your style with its clean lines and refined charm.</p></dd>
+          <dd class="highlight"><p>+ hot towel</p></dd>
           <dd class="price">
-            $35
+            <p>$35</p>
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -95,6 +101,7 @@ get_header();
           <dd class="price">
             $30
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -105,6 +112,7 @@ get_header();
           <dd class="price">
             $35
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -113,6 +121,7 @@ get_header();
           <dd class="price">
             $35
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -121,6 +130,7 @@ get_header();
           <dd class="price">
             $35
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -130,6 +140,7 @@ get_header();
           <dd class="price">
             $35
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -138,6 +149,7 @@ get_header();
           <dd class="price">
             $25
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -147,6 +159,7 @@ get_header();
           <dd class="price">
             $55
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -156,6 +169,7 @@ get_header();
           <dd class="price">
             $55
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -165,6 +179,7 @@ get_header();
           <dd class="price">
             $30
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -174,6 +189,7 @@ get_header();
           <dd class="price">
             $30
           </dd>
+          <span class="bubble"></span>
         </dl>
 
         <dl>
@@ -182,6 +198,7 @@ get_header();
           <dd class="price">
             $10
           </dd>
+          <span class="bubble"></span>
         </dl>
 
       </div>
@@ -196,7 +213,7 @@ get_header();
 
   <section id="hours">
     <div class="container">
-      <h2 class="main">Hours</h2>
+      <h2 class="main">Opening Hours</h2>
 
       <h3> We are open everyday </h3>
       <dl>
@@ -206,6 +223,7 @@ get_header();
             <span>9:00 am </span> 
             <span>5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
 
         <div>
@@ -214,6 +232,7 @@ get_header();
             <span>9:00 am </span>
             <span> 5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
 
         <div>
@@ -222,6 +241,7 @@ get_header();
             <span>9:00 am </span> 
             <span> 5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
 
         <div>
@@ -230,6 +250,7 @@ get_header();
             <span>9:00 am </span>
             <span> 5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
 
         <div>
@@ -238,6 +259,7 @@ get_header();
             <span>9:00 am </span> 
             <span> 5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
 
         <div>
@@ -246,6 +268,7 @@ get_header();
             <span>9:00 am </span> 
             <span> 5:30 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
         <div>
           <dt>Sun</dt>
@@ -253,6 +276,7 @@ get_header();
             <span>10:00 am</span> 
             <span>  2:00 pm</span>
           </dd>
+          <span class="bubble"></span>
         </div>
       </dl>
     </div>
