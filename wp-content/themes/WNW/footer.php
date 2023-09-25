@@ -44,7 +44,7 @@
 					<img src="<?php path_to('images/icons/instagram.png') ?>" alt="instagram" />
 				</a>
 	
-				<a href="" target="_blank">
+				<a href="https://www.tiktok.com/@whiskeyandwhiskersbarber?_t=8ftesJntWbQ&_r=1&fbclid=IwAR3nX-fuG4VHfQP3n8E4yUsvsUmN4tVnaeJYFQxQWZnENo87Pb9bNDS9WLM" target="_blank">
 					<img src="<?php path_to('images/icons/tik-tok.png') ?>" alt="tiktok" />
 				</a>
 			</div>
