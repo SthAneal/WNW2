@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Whiskey & Whiskers</title>
+	<title>Whiskey & Whiskers: Yours Barber Solution</title>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
