@@ -13,7 +13,7 @@ add_filter('wpcf7_autop_or_not', '__return_false');
  */
 function pm_register_styles() {
 	global $site_key;
-	wp_enqueue_style( $site_key.'-style', get_template_directory_uri() . '/assets/css/styles.css', array(), 1.0 );
+	wp_enqueue_style( $site_key.'-style', get_template_directory_uri() . '/assets/css/styles.css', array(), 1.1 );
 
 	foreach (explode(" ", "wnw") as $script) {
 		wp_enqueue_script( $site_key.'-'.$script, get_stylesheet_directory_uri() . '/assets/scripts/'.$script.'.js', array( 'jquery' ) );
