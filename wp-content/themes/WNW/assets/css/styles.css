@@ -401,30 +401,33 @@ footer.main .touch > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   order: -1;
-  width: 320px;
+  width: 50%;
   padding: 40px 30px 90px;
+  row-gap: 40px;
 }
 footer.main .touch > div h3 {
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #F0A500;
 }
 footer.main .touch > div > div {
   display: flex;
   gap: 20px;
+  width: 100%;
+  justify-content: flex-end;
 }
-footer.main .touch > div a {
+footer.main .touch > div a.social {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
-footer.main .touch > div a img {
+footer.main .touch > div a.social img {
   width: 100%;
 }
-footer.main .touch > div a:hover {
+footer.main .touch > div a.social:hover {
   transform: scale(1.1);
 }
 footer.main .copy-rights {
@@ -446,6 +449,14 @@ footer.main .copy-rights {
   footer.main .touch > div {
     order: initial;
   }
+}
+@media screen and (max-width: 1138px) {
+  footer.main .touch > div {
+    align-items: center;
+  }
+  footer.main .touch > div > div {
+    justify-content: center;
+  }
   footer.main .touch dl {
     align-items: center;
   }
@@ -459,6 +470,7 @@ footer.main .copy-rights {
 
 main {
   position: relative;
+  overflow: hidden;
 }
 main section.intro {
   display: flex;

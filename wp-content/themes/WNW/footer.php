@@ -36,17 +36,21 @@
 		<div>
 			<h3>follow us on</h3>
 			<div>
-				<a href="https://www.facebook.com/profile.php?id=100093381730327" target="_blank">
+				<a href="https://www.facebook.com/profile.php?id=100093381730327" target="_blank" class="social">
 					<img src="<?php path_to('images/icons/facebook.png') ?>" alt="facebook" />
 				</a>
 	
-				<a href="https://www.instagram.com/whiskeyandwhiskersbarbershop/" target="_blank">
+				<a href="https://www.instagram.com/whiskeyandwhiskersbarbershop/" target="_blank" class="social">
 					<img src="<?php path_to('images/icons/instagram.png') ?>" alt="instagram" />
 				</a>
 	
-				<a href="https://www.tiktok.com/@whiskeyandwhiskersbarber?_t=8ftesJntWbQ&_r=1&fbclid=IwAR3nX-fuG4VHfQP3n8E4yUsvsUmN4tVnaeJYFQxQWZnENo87Pb9bNDS9WLM" target="_blank">
+				<a href="https://www.tiktok.com/@whiskeyandwhiskersbarber?_t=8ftesJntWbQ&_r=1&fbclid=IwAR3nX-fuG4VHfQP3n8E4yUsvsUmN4tVnaeJYFQxQWZnENo87Pb9bNDS9WLM" target="_blank" class="social">
 					<img src="<?php path_to('images/icons/tik-tok.png') ?>" alt="tiktok" />
 				</a>
+			</div>
+			<div>
+				<?php echo do_shortcode('[grw id="22"]'); ?>
+				<!-- <?php //echo do_shortcode('[grw id="16"]'); ?> -->
 			</div>
 		</div>
 	</div>

@@ -108,26 +108,29 @@ footer.main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             order: -1;
-            width: 320px;
+            width: 50%;
             padding: 40px 30px 90px;
+            row-gap: 40px;
 
             h3 {
                 text-transform: uppercase;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 color: #F0A500;
             }
 
             >div {
                 display: flex;
                 gap: 20px;
+                width: 100%;
+                justify-content: flex-end;
             }
 
-            a {
+            a.social {
                 display: inline-block;
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
                 filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 
                 img {
@@ -161,6 +164,18 @@ footer.main {
 
             >div {
                 order: initial;
+            }
+        }
+    }
+
+
+    @media screen and (max-width:1138px) {
+        .touch {
+            >div {
+                align-items: center;
+                >div{
+                    justify-content: center;
+                }
             }
 
             dl{
