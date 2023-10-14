@@ -39,8 +39,8 @@
 				<img src="<?php path_to('images/logo-text.png') ?>" alt="whiskey & whiskers" />
 				<!-- <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" /> -->
 			</a>
-			<a href="/#products">products</a>
-			<a href="/#gallery">gallery</a>
-			<a href="/#contact">contact</a>
+			<a href="/products">products</a>
+			<a href="/gallery">gallery</a>
+			<a href="#contact">contact</a>
 		</nav>
 	</header>

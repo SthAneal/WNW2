@@ -1,0 +1,13 @@
+main#page {
+    h2{
+        display: block;
+        margin: auto;
+    }
+    
+    section{
+        &.gallery h2::before {
+            background-image: url(../images/icons/icon-gallery.png);
+        }
+    }
+
+}

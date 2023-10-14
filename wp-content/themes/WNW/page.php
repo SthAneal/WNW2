@@ -1,13 +1,24 @@
 <?php
 get_header();
 ?>
-<main>
-  <h1>Page</h1>
+<main id="page">
   <?php
-  while (have_posts()):
+  while (
+    have_posts()
+  ):
     the_post();
-    echo the_title() . '<br/>';
-    echo the_content();
+    ?>
+    <section class="container <?php echo basename(get_permalink()); ?>">
+      <h2 class="main">
+        <?php echo the_title(); ?>
+      </h2>
+      <div>
+        <?php
+        echo the_content();
+        ?>
+      </div>
+    </section>
+    <?
   endwhile;
   ?>
 

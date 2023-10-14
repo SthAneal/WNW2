@@ -202,3 +202,51 @@ h3 {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
+// NextGEN Gallery Override::after
+// image gallery
+.ngg-simplelightbox img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 313 /210;
+    border-radius: 10px;
+}
+
+.sl-image{
+    border: 5px double $color-secondary;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sl-overlay{
+    background: #000;
+}
+
+.sl-wrapper {
+    .sl-navigation button, .sl-close {
+        color: #fff;
+    }
+
+    .sl-counter{
+        width: 50px;
+        height: 50px;
+        top: 30px;
+        padding: 10px;
+        background: $color-secondary;
+        border-radius: 100%;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 3px;
+        z-index: 99999;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .sl-wrapper {
+        .sl-image .sl-caption{
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+}

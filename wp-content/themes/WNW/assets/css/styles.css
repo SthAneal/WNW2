@@ -181,6 +181,46 @@ h3 {
   animation-fill-mode: forwards;
 }
 
+.ngg-simplelightbox img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 313/210;
+  border-radius: 10px;
+}
+
+.sl-image {
+  border: 5px double #F0CF85;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sl-overlay {
+  background: #000;
+}
+
+.sl-wrapper .sl-navigation button, .sl-wrapper .sl-close {
+  color: #fff;
+}
+.sl-wrapper .sl-counter {
+  width: 50px;
+  height: 50px;
+  top: 30px;
+  padding: 10px;
+  background: #F0CF85;
+  border-radius: 100%;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  z-index: 99999;
+}
+
+@media screen and (max-width: 690px) {
+  .sl-wrapper .sl-image .sl-caption {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
 header.main {
   padding: 25px 0 20px;
   position: relative;
@@ -468,11 +508,11 @@ footer.main .copy-rights {
   }
 }
 
-main {
+main#home {
   position: relative;
   overflow: hidden;
 }
-main section.intro {
+main#home section.intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -483,10 +523,10 @@ main section.intro {
   text-align: center;
   color: #fff;
 }
-main section.intro > * {
+main#home section.intro > * {
   z-index: 1;
 }
-main section.intro::before, main section.intro::after {
+main#home section.intro::before, main#home section.intro::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -494,20 +534,20 @@ main section.intro::before, main section.intro::after {
   z-index: 0;
   opacity: 0.8;
 }
-main section.intro::after {
+main#home section.intro::after {
   background: linear-gradient(360deg, rgb(0, 0, 0) 0%, rgba(6, 6, 6, 0.3379945728) 100%);
 }
-main section.intro > div {
+main#home section.intro > div {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3%;
   text-align: left;
 }
-main section.intro p {
+main#home section.intro p {
   margin-bottom: 20px;
 }
-main section.intro img.bg {
+main#home section.intro img.bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -516,86 +556,86 @@ main section.intro img.bg {
   object-position: bottom center;
   z-index: -1;
 }
-main section.intro .logo-img {
+main#home section.intro .logo-img {
   width: clamp(320px, 35%, 500px);
   height: auto;
   margin-bottom: 40px;
   filter: drop-shadow(0px 1px 0px rgba(255, 255, 255, 0.5019607843));
 }
-main section.intro .logo-img + div {
+main#home section.intro .logo-img + div {
   flex: 1 0 320px;
 }
-main section.intro h2 {
+main#home section.intro h2 {
   text-transform: capitalize;
   margin-bottom: 35px;
 }
-main section.intro p {
+main#home section.intro p {
   line-height: 30px;
 }
-main .intro ~ section {
+main#home .intro ~ section {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-main .intro ~ section > div:first-child {
+main#home .intro ~ section > div:first-child {
   display: flex;
   flex: 1 1 480px;
 }
-main .intro ~ section > div:last-child {
+main#home .intro ~ section > div:last-child {
   position: relative;
   flex: 0 1 500px;
   width: 100%;
 }
-main .intro ~ section > div:last-child div {
+main#home .intro ~ section > div:last-child div {
   position: absolute;
   inset: 0;
   clip: rect(0 auto auto 0);
   filter: brightness(0.8);
 }
-main .intro ~ section > div:last-child img {
+main#home .intro ~ section > div:last-child img {
   position: fixed;
   inset: 0;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-main .intro ~ section#about {
+main#home .intro ~ section#about {
   background-color: #F0CF85;
 }
-main .intro ~ section#about h2 {
+main#home .intro ~ section#about h2 {
   color: #0f0f0f;
 }
-main .intro ~ section#about h2::before {
+main#home .intro ~ section#about h2::before {
   background-image: url(../images/icons/icon-about-us.png);
 }
-main .intro ~ section#about p {
+main#home .intro ~ section#about p {
   margin-bottom: 20px;
 }
-main .intro ~ section#about > div:first-child {
+main#home .intro ~ section#about > div:first-child {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-main .intro ~ section#about > div:first-child > div {
+main#home .intro ~ section#about > div:first-child > div {
   display: flex;
 }
-main .intro ~ section#about > div:first-child > div:first-child {
+main#home .intro ~ section#about > div:first-child > div:first-child {
   flex: 0 1 57%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: left;
 }
-main .intro ~ section#about > div:first-child > div:last-child {
+main#home .intro ~ section#about > div:first-child > div:last-child {
   flex: 0 1 auto;
   width: clamp(320px, 40%, 400px);
   padding: 40px;
   aspect-ratio: 3/4;
   position: relative;
 }
-main .intro ~ section#about > div:first-child > div:last-child::before {
+main#home .intro ~ section#about > div:first-child > div:last-child::before {
   content: "";
   width: 114%;
   height: 100%;
@@ -607,28 +647,28 @@ main .intro ~ section#about > div:first-child > div:last-child::before {
   right: -67px;
   top: 38px;
 }
-main .intro ~ section#about > div:first-child > div img {
+main#home .intro ~ section#about > div:first-child > div img {
   width: 120%;
   height: auto;
   object-fit: contain;
   clip-path: circle(94% at top);
   z-index: 1;
 }
-main .intro ~ section#service {
+main#home .intro ~ section#service {
   background: linear-gradient(358deg, rgb(22, 22, 22) 0%, rgb(24, 24, 24) 50%, rgb(46, 46, 46) 100%);
 }
-main .intro ~ section#service > div:first-child {
+main#home .intro ~ section#service > div:first-child {
   flex-direction: column;
   align-items: center;
 }
-main .intro ~ section#service .services {
+main#home .intro ~ section#service .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   gap: 10px;
 }
-main .intro ~ section#service .services dl {
+main#home .intro ~ section#service .services dl {
   width: clamp(320px, 47%, 370px);
   min-height: 204px;
   padding: 30px 10px 10px;
@@ -643,10 +683,10 @@ main .intro ~ section#service .services dl {
   box-shadow: 0px 1px 4px -1px #6666a1;
   overflow: hidden;
 }
-main .intro ~ section#service .services dl:hover {
+main#home .intro ~ section#service .services dl:hover {
   transform: scale(1.01);
 }
-main .intro ~ section#service .services dt {
+main#home .intro ~ section#service .services dt {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -660,42 +700,42 @@ main .intro ~ section#service .services dt {
   color: #6666a1;
   filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
-main .intro ~ section#service .services dt::before {
+main#home .intro ~ section#service .services dt::before {
   content: "";
   width: 50px;
   height: 50px;
   background-size: cover;
 }
-main .intro ~ section#service .services dt.trimmer::before {
+main#home .intro ~ section#service .services dt.trimmer::before {
   background-image: url(../images/icons/icon-trimmer.png);
 }
-main .intro ~ section#service .services dt.scissor::before {
+main#home .intro ~ section#service .services dt.scissor::before {
   background-image: url(../images/icons/icon-scissor.png);
 }
-main .intro ~ section#service .services dt.blade::before {
+main#home .intro ~ section#service .services dt.blade::before {
   background-image: url(../images/icons/icon-blade.png);
 }
-main .intro ~ section#service .services dt.beard::before {
+main#home .intro ~ section#service .services dt.beard::before {
   background-image: url(../images/icons/icon-beard.png);
 }
-main .intro ~ section#service .services dt.razor::before {
+main#home .intro ~ section#service .services dt.razor::before {
   background-image: url(../images/icons/icon-razor.png);
 }
-main .intro ~ section#service .services dt.dryer::before {
+main#home .intro ~ section#service .services dt.dryer::before {
   background-image: url(../images/icons/icon-dryer.png);
 }
-main .intro ~ section#service .services dd:not(.price, .highlight) {
+main#home .intro ~ section#service .services dd:not(.price, .highlight) {
   margin-bottom: 25px;
   font-weight: 200;
 }
-main .intro ~ section#service .services dd.highlight {
+main#home .intro ~ section#service .services dd.highlight {
   font-size: 18px;
   text-transform: capitalize;
   background: #ffffff;
   padding: 0px 5px;
   color: #f0a500;
 }
-main .intro ~ section#service .services dd.price {
+main#home .intro ~ section#service .services dd.price {
   width: 90px;
   height: 90px;
   color: #E45826;
@@ -709,25 +749,25 @@ main .intro ~ section#service .services dd.price {
   font-size: 30px;
   filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.168627451));
 }
-main .intro ~ section#service h2::before {
+main#home .intro ~ section#service h2::before {
   background-image: url(../images/icons/icon-services.png);
 }
-main .intro ~ section#hours {
+main#home .intro ~ section#hours {
   background-color: #F0CF85;
   background-size: 100px;
 }
-main .intro ~ section#hours h2 {
+main#home .intro ~ section#hours h2 {
   color: #0f0f0f;
 }
-main .intro ~ section#hours h2::before {
+main#home .intro ~ section#hours h2::before {
   background-image: url(../images/icons/icon-opening-hours.png);
 }
-main .intro ~ section#hours h3 {
+main#home .intro ~ section#hours h3 {
   margin-bottom: 40px;
   position: relative;
   color: #ffffff;
 }
-main .intro ~ section#hours h3::before, main .intro ~ section#hours h3::after {
+main#home .intro ~ section#hours h3::before, main#home .intro ~ section#hours h3::after {
   display: inline-block;
   font-size: 84px;
   font-weight: 700;
@@ -735,22 +775,22 @@ main .intro ~ section#hours h3::before, main .intro ~ section#hours h3::after {
   top: 14px;
   color: #12151a;
 }
-main .intro ~ section#hours h3::before {
+main#home .intro ~ section#hours h3::before {
   content: " “ ";
   left: -40px;
 }
-main .intro ~ section#hours h3::after {
+main#home .intro ~ section#hours h3::after {
   content: " ” ";
   right: -40px;
 }
-main .intro ~ section#hours dl {
+main#home .intro ~ section#hours dl {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
-main .intro ~ section#hours dl div {
+main#home .intro ~ section#hours dl div {
   width: 150px;
   padding: 20px 10px;
   display: flex;
@@ -762,65 +802,73 @@ main .intro ~ section#hours dl div {
   opacity: 0;
   color: #ffffff;
 }
-main .intro ~ section#hours dl div:hover {
+main#home .intro ~ section#hours dl div:hover {
   transform: scale(1.1);
   color: #12151a;
 }
-main .intro ~ section#hours dl dt {
+main#home .intro ~ section#hours dl dt {
   font-weight: 500;
   font-size: 24px;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #F0A500;
 }
-main .intro ~ section#hours dl dd {
+main#home .intro ~ section#hours dl dd {
   font-size: 18px;
   display: flex;
   flex-direction: column;
 }
-main .intro ~ section#hours dl dd span {
+main#home .intro ~ section#hours dl dd span {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .intro ~ section#hours dl dd span::before, main .intro ~ section#hours dl dd span::after {
+main#home .intro ~ section#hours dl dd span::before, main#home .intro ~ section#hours dl dd span::after {
   display: inline-block;
   font-size: 16px;
   font-weight: 200;
 }
-main .intro ~ section#hours dl dd span:first-child {
+main#home .intro ~ section#hours dl dd span:first-child {
   margin-bottom: 15px;
 }
-main .intro ~ section#hours dl dd span:first-child::before {
+main#home .intro ~ section#hours dl dd span:first-child::before {
   content: "OPEN";
 }
-main .intro ~ section#hours dl dd span:last-child::before {
+main#home .intro ~ section#hours dl dd span:last-child::before {
   content: "CLOSE";
 }
-main .intro ~ section#hours > div:first-child {
+main#home .intro ~ section#hours > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-main .intro ~ section#hours .bubble {
+main#home .intro ~ section#hours .bubble {
   background-color: #ffffff;
 }
 @media screen and (max-width: 991px) {
-  main section.intro > div {
+  main#home section.intro > div {
     flex-direction: column;
   }
-  main section.intro .logo-img,
-  main section.intro .logo-img + div {
+  main#home section.intro .logo-img,
+  main#home section.intro .logo-img + div {
     text-align: center;
   }
-  main section#about > div:first-child {
+  main#home section#about > div:first-child {
     flex-direction: column;
   }
-  main section#about > div:first-child div:last-child {
+  main#home section#about > div:first-child div:last-child {
     order: -1;
   }
+}
+
+main#page h2 {
+  display: block;
+  margin: auto;
+}
+main#page section.gallery h2::before {
+  background-image: url(../images/icons/icon-gallery.png);
 }
 
 /*# sourceMappingURL=styles.css.map */

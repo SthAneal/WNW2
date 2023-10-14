@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main id="main">
+<main id="home">
   <section class="intro">
 
     <img src="<?php path_to('images/wnw-place.jpg') ?>" alt="wnw place" class="bg"/>
