@@ -31,6 +31,10 @@ footer.main {
         }
     }
 
+    > div{
+        opacity: 0; // for fadeIn action
+    }
+
     .touch {
         display: flex;
         justify-content: flex-end;

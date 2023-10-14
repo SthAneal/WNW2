@@ -1,5 +1,5 @@
-<footer class="main">
-	<h2 class="main" id="contact">Contact Us</h2>
+<footer class="main" id="contact">
+	<h2 class="main">Contact Us</h2>
 
 	<div class="map container">
 		<iframe

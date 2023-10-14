@@ -26,12 +26,18 @@
 
 </head>
 
-<body <?php body_class(); ?> class="container">
+<body <?php body_class(); ?>>
 	<?php
+	global $page_loading_first_time;
 	wp_body_open();
 	?>
-	<header class="main">
+	<header class="main<?php echo $page_loading_first_time ? ' header-animate' : '' ?>">
 		<nav class="container">
+			<input id="hamburger-toggle" type="checkbox" />
+			<label class='hamburger' for="hamburger-toggle">
+				<div class='hamburger-button'></div>
+			</label>
+
 			<a href="/#about">about us</a>
 			<a href="/#service">services</a>
 			<a href="/#hours">hours</a>

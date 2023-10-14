@@ -12,11 +12,13 @@ get_header();
       <h2 class="main">
         <?php echo the_title(); ?>
       </h2>
+      <?php if(basename(get_permalink()) === 'gallery'): ?>
       <div>
         <?php
         echo the_content();
         ?>
       </div>
+      <?php endif; ?>
     </section>
     <?
   endwhile;
