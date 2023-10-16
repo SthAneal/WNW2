@@ -113,6 +113,7 @@ header.main {
                 &.logo {
                     order: -1;
                     flex-direction: row;
+                    margin: 0 auto;
 
                     button {
                         display: flex;
@@ -126,7 +127,8 @@ header.main {
 
 
 header.main.header-animate {
-
+    overflow: hidden;
+    
     &::before,
     &::after {
         animation-duration: 2s;
