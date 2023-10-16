@@ -101,6 +101,7 @@ header.main {
 
     @media screen and (max-width:991px) {
         padding: 0;
+
         nav {
             flex-direction: column;
             gap: 0;
@@ -114,7 +115,8 @@ header.main {
                 &.logo {
                     order: -1;
                     flex-direction: row;
-                    margin: 0 auto;
+                    margin: -35px auto;
+                    transform: scale(0.8);
 
                     button {
                         display: flex;
