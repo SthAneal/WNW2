@@ -237,6 +237,7 @@ header.main {
   padding: 25px 0 20px;
   position: relative;
   z-index: 99;
+  overflow: hidden;
   background-color: #12151a;
 }
 header.main.fixed {

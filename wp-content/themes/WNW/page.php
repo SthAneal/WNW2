@@ -20,7 +20,7 @@ get_header();
       </div>
       <?php endif; ?>
     </section>
-    <?
+    <?php
   endwhile;
   ?>
 
