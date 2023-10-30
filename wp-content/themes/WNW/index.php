@@ -4,15 +4,16 @@ get_header();
 <main id="home">
   <section class="intro">
 
-    <img src="<?php path_to('images/wnw-place.jpg') ?>" alt="wnw place" class="bg"/>
+    <img src="<?php path_to('images/wnw-place.jpg') ?>" alt="wnw place" class="bg" />
 
     <div class="container">
-      <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" class="logo-img"/>
-  
+      <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" class="logo-img" />
+
       <div>
         <h2>the utmost experience</h2>
         <p>
-          Welcome to The Whiskey & Whiskers Barber Shop, where traditional grooming meets the fine taste of whiskey. Step
+          Welcome to The Whiskey & Whiskers Barber Shop, where traditional grooming meets the fine taste of whiskey.
+          Step
           into a world where the art of barbering is elevated to an experience of utmost sophistication and indulgence.
           Nestled in the heart of the city, our establishment combines the timeless rituals of men's grooming with the
           pleasure of savoring a perfectly crafted whiskey.
@@ -85,8 +86,12 @@ get_header();
 
         <dl>
           <dt class="scissor">Scissor cut</dt>
-          <dd><p>Embrace the scissor cut and elevate your style with its clean lines and refined charm.</p></dd>
-          <dd class="highlight"><p>+ hot towel</p></dd>
+          <dd>
+            <p>Embrace the scissor cut and elevate your style with its clean lines and refined charm.</p>
+          </dd>
+          <dd class="highlight">
+            <p>+ hot towel</p>
+          </dd>
           <dd class="price">
             <p>$35</p>
           </dd>
@@ -211,6 +216,85 @@ get_header();
     </div>
   </section>
 
+  <section id="product">
+    <div class="container">
+      <h2 class="main">Products</h2>
+      <div class="products">
+
+        <dl>
+          <img src="<?php path_to('images/product2.jpg') ?>" alt="layrite cement clay">
+          <dt>clay layrite cement 75g</dt>
+          <dd class="price">$16.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish. Perfect for
+            neat, yet casual styles or a more everyday look.
+          </dd>
+          <dd class="highlight">Buy 1, get 15% OFF additional units!</dd>
+        </dl>
+
+        <dl>
+          <img src="<?php path_to('images/product1.jpg') ?>" alt="layrite cement clay">
+          <dt>layrite cement clay 120g</dt>
+          <dd class="price">$36.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish. Perfect for
+            neat, yet casual styles or a more everyday look.
+          </dd>
+          <dd class="highlight">Buy 1, get 15% OFF additional units!</dd>
+        </dl>
+
+        <dl>
+          <img src="<?php path_to('images/product1.jpg') ?>" alt="layrite cement clay">
+          <dt>cement layrite clay 240g</dt>
+          <dd class="price">$46.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish.
+          </dd>
+          <dd class="highlight">Buy 1, get 15% OFF additional units!</dd>
+        </dl>
+
+        <dl>
+          <img src="<?php path_to('images/product2.jpg') ?>" alt="layrite cement clay">
+          <dt>layrite cement clay 120g</dt>
+          <dd class="price">$36.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish. Perfect for
+            neat, yet casual styles or a more everyday look.
+          </dd>
+        </dl>
+
+        <dl>
+          <img src="<?php path_to('images/product2.jpg') ?>" alt="layrite cement clay">
+          <dt>clay layrite cement 75g</dt>
+          <dd class="price">$16.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish. Perfect for
+            neat, yet casual styles or a more everyday look.
+          </dd>
+          <dd class="highlight">Buy 1, get 15% OFF additional units!</dd>
+        </dl>
+
+        <dl>
+          <img src="<?php path_to('images/product1.jpg') ?>" alt="layrite cement clay">
+          <dt>layrite cement clay 120g</dt>
+          <dd class="price">$36.99</dd>
+          <dd>
+            The Layrite Cement Clay is a hair styling clay with a strong hold and low sheen matte finish. Perfect for
+            neat, yet casual styles or a more everyday look.
+          </dd>
+          <dd class="highlight">Buy 1, get 15% OFF additional units!</dd>
+        </dl>
+
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <img class="thumbnail" src="<?php path_to('images/bg_img-4.jpg') ?>" alt="about_bg.jpg" />
+      </div>
+    </div>
+  </section>
+
   <section id="hours">
     <div class="container">
       <h2 class="main">Opening Hours</h2>
@@ -220,7 +304,7 @@ get_header();
         <div>
           <dt>mon</dt>
           <dd>
-            <span>9:00 am </span> 
+            <span>9:00 am </span>
             <span>5:30 pm</span>
           </dd>
           <span class="bubble"></span>
@@ -238,7 +322,7 @@ get_header();
         <div>
           <dt>wed</dt>
           <dd>
-            <span>9:00 am </span> 
+            <span>9:00 am </span>
             <span> 5:30 pm</span>
           </dd>
           <span class="bubble"></span>
@@ -256,7 +340,7 @@ get_header();
         <div>
           <dt>fri</dt>
           <dd>
-            <span>9:00 am </span> 
+            <span>9:00 am </span>
             <span> 5:30 pm</span>
           </dd>
           <span class="bubble"></span>
@@ -265,7 +349,7 @@ get_header();
         <div>
           <dt>sat</dt>
           <dd>
-            <span>9:00 am </span> 
+            <span>9:00 am </span>
             <span> 5:30 pm</span>
           </dd>
           <span class="bubble"></span>
@@ -273,8 +357,8 @@ get_header();
         <div>
           <dt>Sun</dt>
           <dd>
-            <span>10:00 am</span> 
-            <span>  2:00 pm</span>
+            <span>10:00 am</span>
+            <span> 2:00 pm</span>
           </dd>
           <span class="bubble"></span>
         </div>

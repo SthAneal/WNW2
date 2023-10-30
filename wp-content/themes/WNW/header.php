@@ -40,12 +40,12 @@
 
 			<a href="/#about">about us</a>
 			<a href="/#service">services</a>
-			<a href="/#hours">hours</a>
+			<a href="/#product">products</a>
 			<a href="/" class="logo">
 				<img src="<?php path_to('images/logo-text.png') ?>" alt="whiskey & whiskers" />
 				<!-- <img src="<?php path_to('images/logo-img.png') ?>" alt="whiskey & whiskers barber shop" /> -->
 			</a>
-			<a href="/products">products</a>
+			<a href="/#hours">hours</a>
 			<a href="/gallery">gallery</a>
 			<a href="#contact">contact</a>
 		</nav>

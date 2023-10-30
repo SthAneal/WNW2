@@ -40,7 +40,7 @@ main#home {
             text-align: left;
         }
 
-        p{
+        p {
             margin-bottom: 20px;
         }
 
@@ -119,15 +119,15 @@ main#home {
 
             background-color: $color-secondary;
 
-            h2{
+            h2 {
                 color: #0f0f0f;
-                
+
                 &::before {
                     background-image: url(../images/icons/icon-about-us.png);
                 }
             }
 
-            p{
+            p {
                 margin-bottom: 20px;
             }
 
@@ -188,7 +188,7 @@ main#home {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .services {
                 display: flex;
                 flex-wrap: wrap;
@@ -212,9 +212,9 @@ main#home {
                     box-shadow: 0px 1px 4px -1px #6666a1;
                     overflow: hidden;
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.01);
-                    }                    
+                    }
                 }
 
                 dt {
@@ -271,14 +271,6 @@ main#home {
                         font-weight: 200;
                     }
 
-                    &.highlight {
-                        font-size: 18px;
-                        text-transform: capitalize;
-                        background: #ffffff;
-                        padding: 0px 5px;
-                        color: #f0a500;
-                    }
-
                     &.price {
                         width: 90px;
                         height: 90px;
@@ -302,25 +294,111 @@ main#home {
 
         }
 
+        &#product {
+            // background: $gradient-primary;
+            background-color: $color-secondary;
+
+
+            >div:first-child {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                gap: 20px;
+                
+                dl {
+                    width: clamp(320px, 47%, 370px);
+                    min-height: 204px;
+                    padding-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                    background: $gradient-secondary;
+                    opacity: 0;
+                    position: relative;
+                    box-shadow: 0px 1px 4px -1px #6666a1;
+                    overflow: hidden;
+
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    object-position: center;
+                    padding: 10px;
+                    background-color: #ffffff;
+                }
+
+                dt {
+                    font-size: 30px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #F0A500;
+                    filter: drop-shadow(0px 3px 4px rgba(168, 168, 168, 0.169));
+                }
+
+                dd {
+                    &:not(.price, .highlight) {
+                        flex: 1 1 auto;
+                        padding: 0 10px;
+                        color: #ffffff;
+                        margin-bottom: 25px;
+                        font-weight: 200;
+                    }
+
+                    &.price {
+                        color: #E45826;
+                        font-size: 30px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            h2 {
+                color: #0f0f0f;
+
+                &::before {
+                    background-image: url(../images/icons/icon-hair-products.png);
+                }
+            }
+
+        }
+
+
+
         &#hours {
             // background-image: url('../images/bg_pattern-2.jpg');
             background-color: $color-secondary;
             background-size: 100px;
 
-            h2{
+            h2 {
                 color: #0f0f0f;
 
                 &::before {
                     background-image: url(../images/icons/icon-opening-hours.png);
                 }
             }
-            
-            h3{
+
+            h3 {
                 margin-bottom: 40px;
                 position: relative;
                 color: #ffffff;
 
-                &::before, &::after{
+                &::before,
+                &::after {
                     display: inline-block;
                     font-size: 84px;
                     font-weight: 700;
@@ -328,13 +406,13 @@ main#home {
                     top: 14px;
                     color: #12151a;
                 }
-                
-                &::before{
+
+                &::before {
                     content: " “ ";
                     left: -40px;
                 }
 
-                &::after{
+                &::after {
                     content: " ” ";
                     right: -40px;
                 }
@@ -360,7 +438,7 @@ main#home {
                     opacity: 0; // for fadeIn action
                     color: #ffffff;
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.1);
                         color: #12151a;
                     }
@@ -379,26 +457,28 @@ main#home {
                     display: flex;
                     flex-direction: column;
 
-                    span{
+                    span {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
 
-                        &::before, &::after{
+                        &::before,
+                        &::after {
                             display: inline-block;
                             font-size: 16px;
                             font-weight: 200;
                         }
 
-                        &:first-child{
+                        &:first-child {
                             margin-bottom: 15px;
-                            &::before{
+
+                            &::before {
                                 content: 'OPEN';
                             }
                         }
 
-                        &:last-child::before{
+                        &:last-child::before {
                             content: 'CLOSE';
                         }
                     }
@@ -412,7 +492,7 @@ main#home {
                 align-items: center;
             }
 
-            .bubble{
+            .bubble {
                 background-color: #ffffff;
             }
         }

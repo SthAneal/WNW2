@@ -215,6 +215,14 @@ h3 {
   z-index: 99999;
 }
 
+.highlight {
+  font-size: 15px;
+  text-transform: capitalize;
+  background: #ffffff;
+  padding: 0px 5px;
+  color: #f0a500;
+}
+
 @media screen and (max-width: 690px) {
   body {
     font-size: 19px;
@@ -867,13 +875,6 @@ main#home .intro ~ section#service .services dd:not(.price, .highlight) {
   margin-bottom: 25px;
   font-weight: 200;
 }
-main#home .intro ~ section#service .services dd.highlight {
-  font-size: 18px;
-  text-transform: capitalize;
-  background: #ffffff;
-  padding: 0px 5px;
-  color: #f0a500;
-}
 main#home .intro ~ section#service .services dd.price {
   width: 90px;
   height: 90px;
@@ -890,6 +891,73 @@ main#home .intro ~ section#service .services dd.price {
 }
 main#home .intro ~ section#service h2::before {
   background-image: url(../images/icons/icon-services.png);
+}
+main#home .intro ~ section#product {
+  background-color: #F0CF85;
+}
+main#home .intro ~ section#product > div:first-child {
+  flex-direction: column;
+  align-items: center;
+}
+main#home .intro ~ section#product .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+main#home .intro ~ section#product .products dl {
+  width: clamp(320px, 47%, 370px);
+  min-height: 204px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgb(22, 22, 22) 0%, rgb(24, 24, 24) 46%, rgb(46, 46, 46) 100%);
+  opacity: 0;
+  position: relative;
+  box-shadow: 0px 1px 4px -1px #6666a1;
+  overflow: hidden;
+}
+main#home .intro ~ section#product .products dl:hover {
+  transform: scale(1.01);
+}
+main#home .intro ~ section#product .products img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+  background-color: #ffffff;
+}
+main#home .intro ~ section#product .products dt {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #F0A500;
+  filter: drop-shadow(0px 3px 4px rgba(168, 168, 168, 0.169));
+}
+main#home .intro ~ section#product .products dd:not(.price, .highlight) {
+  flex: 1 1 auto;
+  padding: 0 10px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-weight: 200;
+}
+main#home .intro ~ section#product .products dd.price {
+  color: #E45826;
+  font-size: 30px;
+  font-weight: 500;
+}
+main#home .intro ~ section#product h2 {
+  color: #0f0f0f;
+}
+main#home .intro ~ section#product h2::before {
+  background-image: url(../images/icons/icon-hair-products.png);
 }
 main#home .intro ~ section#hours {
   background-color: #F0CF85;

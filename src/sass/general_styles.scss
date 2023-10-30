@@ -242,6 +242,14 @@ h3 {
     }
 }
 
+.highlight {
+    font-size: 15px;
+    text-transform: capitalize;
+    background: #ffffff;
+    padding: 0px 5px;
+    color: #f0a500;
+}
+
 @media screen and (max-width:690px) {
     body{
         font-size: 19px;

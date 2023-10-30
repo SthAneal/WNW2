@@ -21,9 +21,11 @@ jQuery(function ($) {
 });
 
 jQuery(function ($) {
-	const targets = document.querySelectorAll("#service .services > dl");
+	const services = document.querySelectorAll("#service .services > dl");
 	const hours = document.querySelectorAll("#hours dl > div");
 	const contact = document.querySelectorAll("#contact > div");
+	const products = document.querySelectorAll("#product .products > dl");
+
 
 	function callback(entries, observer) {
 		entries.forEach((entry) => {
@@ -48,7 +50,8 @@ jQuery(function ($) {
 		});
 	}
 
-	createObserver(targets, callback);
+	createObserver(services, callback);
+	createObserver(products, callback);
 	createObserver(hours, callback);
 	createObserver(contact, callback);
 });
