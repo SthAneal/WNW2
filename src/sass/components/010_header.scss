@@ -1,182 +1,189 @@
 header.main {
-    padding: 25px 0 20px;
-    position: relative;
-    z-index: 99;
-    overflow: hidden;
     background-color: $color-primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
+    z-index: 1;
 
-    &.fixed {
-        position: fixed;
-        top: -265px;
-        left: 0px;
-        right: 0px;
-        opacity: 0.93;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 'hamburger booknow'
+            'menuwrapper menuwrapper';
+        align-content: start;
+        padding: 0;
 
-        animation-name: fixedToTop;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        >* {
+            padding: 10px;
+        }
     }
 
-    &::before,
-    &::after {
-        content: '';
-        width: 50%;
-        position: absolute;
-        bottom: 0px;
-    }
-
-    &::before {
-        border-top: 6px solid $color-header-before;
-        left: 0;
-    }
-
-    &::after {
-        border-top: 6px solid $color-header-after;
-        right: 0;
-    }
-
-    nav {
+    #hamburger {
+        grid-area: hamburger;
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 20px;
-        padding: 10px;
-        position: relative;
+        height: 72px;
 
-        &.container {
-            width: clamp(320px, 100%, 1280px);
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    .menu-wrapper {
+        grid-area: menuwrapper;
+        padding: 10px 20px;
+        opacity: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+
+        li {
+            font-family: $type-face-secondary;
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 400;
+            border-bottom: 1px solid #f0cf851f;
+
+            &.current-menu-item a {
+                color: $color-secondary;
+            }
         }
 
         a {
-            flex: 1 1 fit-content;
-            display: flex;
             text-decoration: none;
+            color: #fff;
+            display: block;
             text-transform: uppercase;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            color: #ffffff;
-            letter-spacing: 1px;
+
 
             &:hover {
+                text-decoration: underline;
                 color: $color-secondary;
             }
+        }
+    }
 
-            @for $i from 1 through 3 {
-                &:nth-of-type(#{$i}) {
-                    left: 0;
-                }
-            }
+    .booknow {
+        grid-area: booknow;
+        display: flex;
+        justify-content: flex-end;
+        background-color: $color-secondary;
+        position: relative;
+        height: 72px;
 
-            @for $i from 5 through 7 {
-                &:nth-of-type(#{$i}) {
-                    right: 0;
-                }
-            }
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-right-width: 86px;
+            border-right-color: #F0CF85;
+            border-top-width: 157px;
+            position: absolute;
+            left: -74px;
+            top: -85px;
+        }
 
-            &.logo {
-                flex: 1 0 150px;
-                flex-direction: column;
-                margin: 0 40px;
-                transform: scale(1.0);
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
 
-                img {
-                    width: 100%;
-                    flex: 1 1 auto;
-                    filter: invert(1) drop-shadow(-3px 2px 13px $color-secondary);
-                }
-
-                button {
-                    display: none;
-                }
+            &:hover{
+                filter: invert(1);
             }
         }
 
         img {
-            max-width: 250px;
-            height: auto;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width:980px) {
+    body.open-menu {
+        header.main {
+            animation-name: expandHeader;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-fill-mode: forwards;
+
+            #hamburger {
+                .close {
+                    display: block;
+                }
+
+                .open {
+                    display: none;
+                }
+            }
+
+            .menu-wrapper {
+                animation-name: showMenu;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                animation-fill-mode: forwards;
+            }
+
         }
     }
 
-    @media screen and (max-width:991px) {
-        padding: 0;
+    body.close-menu {
+        header.main {
+            animation-name: closeHeader;
+            animation-duration: 0.2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
 
-        nav {
-            flex-direction: column;
-            gap: 0;
-
-            a {
-                font-size: 16px;
-                width: 100%;
-                flex: 1 1 auto;
-                justify-content: center;
-
-                &.logo {
-                    order: -1;
-                    flex-direction: row;
-                    margin: -35px auto;
-                    transform: scale(0.8);
-
-                    button {
-                        display: flex;
-                    }
-                }
+            .menu-wrapper {
+                animation-name: hideMenu;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                animation-fill-mode: forwards;
             }
         }
     }
 }
 
+@media screen and (min-width:981px) {
+    header.main {
+        .container{
+            grid-template-areas: 'menuwrapper booknow';
+        }
 
+        #hamburger {
+            display: none;
+        }
 
-header.main.header-animate {
-    overflow: hidden;
-    
-    &::before,
-    &::after {
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-    }
+        .menu-wrapper {
+            opacity: 1;
+        }
 
-    &::before {
-        left: -120%;
-        animation-name: leftToRight;
-    }
+        .menu {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            gap: 50px;
 
-    &::after {
-        right: -120%;
-        animation-name: rightToLeft;
-    }
-
-    nav a {
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-
-        @for $i from 1 through 3 {
-            &:nth-of-type(#{$i}) {
-                left: -120%;
-                animation-name: leftToRight;
+            li {
+                border: none;
             }
         }
-
-        @for $i from 5 through 7 {
-            &:nth-of-type(#{$i}) {
-                right: -120%;
-                animation-name: rightToLeft;
-            }
-        }
-
-        &.logo {
-            transform: scale(2.1);
-            animation-name: zoomOut;
-            animation-duration: 3s;
-            animation-iteration-count: 1;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
-        }
     }
+
 }

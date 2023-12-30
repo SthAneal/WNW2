@@ -23,11 +23,6 @@ function wnw_register_styles() {
 
 add_action( 'wp_enqueue_scripts', 'wnw_register_styles' );
 
-add_action( 'after_setup_theme', function() {
-	// add_theme_support( 'woocommerce' );
-  // add_image_size('product-thumbnail', 260, 260, true);
-} );
-
 function path_to($file, $do_echo = true) {
 	$stubs = array(
 		'/^images/' => 'assets/images',
@@ -69,4 +64,10 @@ function site_first_load_cookie() {
 		$page_loading_first_time = true;
 		setcookie( 'isFirstLoad', true, time() + 600); //10 mins of expiry time
 	}
+}
+
+// register menu
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
+  register_nav_menu( 'primary', __( 'Primary' ) );
 }

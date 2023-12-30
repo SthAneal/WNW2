@@ -18,7 +18,7 @@ services:
      - db
    image: wordpress:latest
    ports:
-     - "8000:80"
+     - "3000:80"
    volumes:
       - ./wp-content:/var/www/html/wp-content/
       - ./config/wp-config.php:/var/www/html/wp-config.php
@@ -29,15 +29,10 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
     ports:
-      - "8081:80"
+      - "3081:80"
     environment:
       UPLOAD_LIMIT: 300M
 
 
 volumes:
     db_data: {}
-      # driver: local
-      # driver_opts:
-      #   o: bind
-      #   type: none
-      #   device: ./db/

@@ -1,5 +1,5 @@
 {
-  "name": "WNW",
+  "name": "wnw",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,10 +19,10 @@
     "concat:components": "globcat   ./src/sass/components/*.scss -o ./build/styles/components.concat.scss",
     "concat:pages": "globcat   ./src/sass/pages/*.scss -o ./build/styles/pages.concat.scss",
     "concat:sass": "globcat  -o ./build/styles/styles.concat.scss  ./src/sass/_reset.scss ./src/sass/_variables.scss ./src/sass/_mixins.scss ./src/sass/general_styles.scss ./build/styles/components.concat.scss ./build/styles/pages.concat.scss",
-    "compile:sass": "sass ./build/styles/styles.concat.scss  ./wp-content/themes/WNW/assets/css/styles.css ",
+    "compile:sass": "sass ./build/styles/styles.concat.scss  ./wp-content/themes/wnw/assets/css/styles.css ",
     "build:sass": "npm-run-all concat:components concat:pages concat:sass compile:sass",
-    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" ./wp-content/themes/WNW/assets/css/styles.css -o ./build/styles/style.prefix.css",
-    "compress:css": "sass build/styles/style.prefix.css wp-content/themes/WNW/assets/css/styles-compressed.css --style=compressed",
+    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" ./wp-content/themes/wnw/assets/css/styles.css -o ./build/styles/style.prefix.css",
+    "compress:css": "sass build/styles/style.prefix.css wp-content/themes/wnw/assets/css/styles-compressed.css --style=compressed",
     "finalise:css": "npm-run-all concat:components concat:sass concat:pages compile:sass prefix:css compress:css"
   },
   "author": "",
