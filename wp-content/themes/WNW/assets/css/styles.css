@@ -231,6 +231,15 @@ header.main .booknow::before {
   left: -74px;
   top: -85px;
 }
+header.main .booknow::after {
+  content: "";
+  width: 100vw;
+  height: 72px;
+  background-color: #F0CF85;
+  position: absolute;
+  right: -100vw;
+  top: 0;
+}
 header.main .booknow .btn {
   display: flex;
   align-items: center;
