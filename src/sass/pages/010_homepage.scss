@@ -22,47 +22,42 @@
         h1 {
             color: #fff;
         }
-    }
 
-    &[slider-direction="next"]{
-        
-        .item.active {
-            animation-name: showSlider;
+        &.active {
             animation-duration: 1s;
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation-fill-mode: forwards;
             z-index: 2;
+        }
+
+        &.hide {
+            animation-duration: 3s;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &[slider-direction="next"] {
+        .item.active {
+            animation-name: showSlider;
         }
 
         .item.hide {
             animation-name: hideSlider;
-            animation-duration: 3s;
-            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation-fill-mode: forwards;
-            
         }
     }
 
-    &[slider-direction="prev"]{
-        
+    &[slider-direction="prev"] {
         .item.active {
             animation-name: showSliderReverse;
-            animation-duration: 1s;
-            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation-fill-mode: forwards;
-            z-index: 2;
         }
 
         .item.hide {
             animation-name: hideSliderReverse;
-            animation-duration: 3s;
-            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation-fill-mode: forwards;
-            
         }
     }
 
-    >img{
+    >img {
         width: 45px;
         height: 45px;
         cursor: pointer;
@@ -70,16 +65,28 @@
         top: calc(50% - 22px);
         z-index: 3;
 
-        &#prev{
-            left: 50px;
+        &#prev {
+            left: 0px;
         }
 
-        &#next{
-            right: 50px;
+        &#next {
+            right: 0px;
         }
 
-        &:hover{
+        &:hover {
             transform: scale(1.1);
+        }
+    }
+
+    @media screen and (min-width:981px) {
+        >img {
+            &#prev {
+                left: 50px;
+            }
+
+            &#next {
+                right: 50px;
+            }
         }
     }
 }

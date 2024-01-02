@@ -380,31 +380,28 @@ footer.main .current-menu-item a {
 .slider .item h1 {
   color: #fff;
 }
-.slider[slider-direction=next] .item.active {
-  animation-name: showSlider;
+.slider .item.active {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
   z-index: 2;
+}
+.slider .item.hide {
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+.slider[slider-direction=next] .item.active {
+  animation-name: showSlider;
 }
 .slider[slider-direction=next] .item.hide {
   animation-name: hideSlider;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: forwards;
 }
 .slider[slider-direction=prev] .item.active {
   animation-name: showSliderReverse;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: forwards;
-  z-index: 2;
 }
 .slider[slider-direction=prev] .item.hide {
   animation-name: hideSliderReverse;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: forwards;
 }
 .slider > img {
   width: 45px;
@@ -415,13 +412,21 @@ footer.main .current-menu-item a {
   z-index: 3;
 }
 .slider > img#prev {
-  left: 50px;
+  left: 0px;
 }
 .slider > img#next {
-  right: 50px;
+  right: 0px;
 }
 .slider > img:hover {
   transform: scale(1.1);
+}
+@media screen and (min-width: 981px) {
+  .slider > img#prev {
+    left: 50px;
+  }
+  .slider > img#next {
+    right: 50px;
+  }
 }
 
 main#page h2 {
