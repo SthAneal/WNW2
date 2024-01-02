@@ -15,9 +15,23 @@
         <dl class="social">
             <dt>follow us on</dt>
             <dd>
-                <a href="/"><img src="<?php path_to('/assets/images/icons/facebook.png') ?>" alt="facebook" /></a>
-                <a href="/"><img src="<?php path_to('/assets/images/icons/instagram.png') ?>" alt="instagram" /></a>
-                <a href="/"><img src="<?php path_to('/assets/images/icons/tik-tok.png') ?>" alt="tick tok" /></a>
+                <?php
+                $args = array(
+                    'post_type' => 'social-links',
+                    'post_status' => 'publish',
+                    'order' => 'asc',
+                    'post_per_page' => '3'
+                );
+
+                $query = new WP_Query($args);
+                while ($query->have_posts()):
+                    $query->the_post();
+                    ?>
+                    <a href="<?php the_field('link'); ?>" target="_blank"><img src="<?php  echo get_field('image')['url']; ?>"
+                            alt="<?php echo get_field('image')['alt']; ?>" /></a>
+                    <?php
+                endwhile;
+                ?>
             </dd>
         </dl>
 

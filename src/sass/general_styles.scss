@@ -108,3 +108,57 @@ body {
        opacity: 0;
     }
 }
+
+@keyframes showSlider {
+    0%{
+        left: 120%;
+    }
+
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes showSliderReverse {
+    0%{
+        left: -120%;
+    }
+
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes hideSlider {
+    0%{
+        left: 0%;
+        z-index: 2;
+    }
+
+    50%{
+        left: -120%;
+        z-index: -1;
+    }
+
+    100%{
+        left: 0%;
+        z-index: -1;
+    }
+}
+
+@keyframes hideSliderReverse {
+    0%{
+        left: 0%;
+        z-index: 2;
+    }
+
+    50%{
+        left: 120%;
+        z-index: -1;
+    }
+
+    100%{
+        left: 0%;
+        z-index: -1;
+    }
+}

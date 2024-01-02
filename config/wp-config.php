@@ -39,8 +39,8 @@ if (!defined('ENVIRONMENT')) {
 }
 
 define('DB_NAME', 'wnw');
-define('DB_USER', 'wordpress');
-define('DB_PASSWORD', 'wordpress');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
 define('DB_HOST', 'db:3306');
 define('FS_METHOD', 'direct');
 

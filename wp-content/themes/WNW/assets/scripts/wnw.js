@@ -63,7 +63,57 @@
 jQuery(function ($) {
 
 	$('#hamburger img').on('click', function () {
-		var state = $('body').hasClass('open-menu'); 
+		var state = $('body').hasClass('open-menu');
 		$('body').toggleClass('open-menu', !state).toggleClass('close-menu', state);
 	})
+});
+
+//slider 
+
+jQuery(function ($) {
+	const slider = $('#slider');
+	let activeItem = parseInt($(slider).attr('active-item'));
+	let totalItem = $('#slider > div.item').length;
+	let animationFrameId;
+	let lastTimestamp = 0;
+	let dir = 'next';
+
+	function playSlider() {
+		let now = Date.now();
+
+		if (!lastTimestamp || now - lastTimestamp >= 5 * 1000) {
+			lastTimestamp = now;
+
+			if (dir === 'next') {
+				activeItem = activeItem >= totalItem ? 1 : activeItem + 1;
+				$(slider).attr('slider-direction', 'next');
+			} else if (dir === 'prev') {
+				activeItem = activeItem <= 1 ? totalItem : activeItem - 1;
+				$(slider).attr('slider-direction', 'prev');
+			}
+
+			$('#slider > div.item.active').removeClass('active').addClass('hide');
+			$(`#slider > div.item:nth-child(${activeItem})`).addClass('active').removeClass('hide');
+			$(slider).attr('active-item', activeItem);
+			dir = 'next';
+		}
+		animationFrameId = requestAnimationFrame(playSlider);
+	}
+
+	animationFrameId = requestAnimationFrame(playSlider);
+
+	$('#prev').on('click', function () {
+		cancelAnimationFrame(animationFrameId);
+		lastTimestamp = 0;
+		dir = 'prev';
+		animationFrameId = requestAnimationFrame(playSlider);
+	});
+
+	$('#next').on('click', function () {
+		cancelAnimationFrame(animationFrameId);
+		lastTimestamp = 0;
+		dir = 'next';
+		animationFrameId = requestAnimationFrame(playSlider);
+
+	});
 });
