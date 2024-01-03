@@ -102,7 +102,7 @@ header.main {
             height: 72px;
             background-color: #F0CF85;
             position: absolute;
-            right: -100vw;
+            left: 99%;
             top: 0;
         }
 
@@ -112,9 +112,9 @@ header.main {
             justify-content: center;
             gap: 10px;
 
-            &:hover{
-                filter: invert(1);
-            }
+            // &:hover{
+            //     filter: invert(1);
+            // }
         }
 
         img {

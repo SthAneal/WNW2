@@ -81,7 +81,8 @@ jQuery(function ($) {
 	function playSlider() {
 		let now = Date.now();
 
-		if (!lastTimestamp || now - lastTimestamp >= 5 * 1000) {
+		if (!lastTimestamp || now - lastTimestamp >= 10 * 1000) {
+		// if (false) {
 			lastTimestamp = now;
 
 			if (dir === 'next') {

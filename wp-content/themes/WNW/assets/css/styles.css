@@ -1,5 +1,5 @@
 /* ---- site variables ---- */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Poppins:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Poppins:wght@200;400&family=Rubik+Doodle+Shadow&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -59,6 +59,9 @@ body {
   font-size: 18px;
   width: fit-content;
   height: 52px;
+}
+.btn:hover {
+  filter: invert(1);
 }
 
 .container {
@@ -145,6 +148,24 @@ body {
   100% {
     left: 0%;
     z-index: -1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 header.main {
@@ -237,7 +258,7 @@ header.main .booknow::after {
   height: 72px;
   background-color: #F0CF85;
   position: absolute;
-  right: -100vw;
+  left: 99%;
   top: 0;
 }
 header.main .booknow .btn {
@@ -245,9 +266,6 @@ header.main .booknow .btn {
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-header.main .booknow .btn:hover {
-  filter: invert(1);
 }
 header.main .booknow img {
   width: 24px;
@@ -381,19 +399,62 @@ footer.main .current-menu-item a {
   left: 0;
   top: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+  background-blend-mode: overlay;
+}
+.slider .item img {
+  width: 270px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0;
+  backdrop-filter: blur(1px);
+}
+.slider .item .info {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  background-color: rgb(0, 0, 0);
+  gap: 40px;
+  padding: 0 10px;
+  opacity: 0;
+  transform: translateY(-200px);
 }
 .slider .item h1 {
   color: #fff;
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  text-align: center;
 }
 .slider .item.active {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
   z-index: 2;
+}
+.slider .item.active img,
+.slider .item.active .info {
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+.slider .item.active img {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+.slider .item.active .info {
+  animation-name: slideUp;
 }
 .slider .item.hide {
   animation-duration: 3s;
@@ -435,6 +496,16 @@ footer.main .current-menu-item a {
   }
   .slider > img#next {
     right: 50px;
+  }
+  .slider .item {
+    flex-direction: row;
+  }
+  .slider .item img {
+    width: 360px;
+    padding: 20px;
+  }
+  .slider .item .info {
+    flex: 0 1 55%;
   }
 }
 
