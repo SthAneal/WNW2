@@ -12,64 +12,6 @@
   scroll-padding-top: 150px;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
-h1, h2, h3, footer.main dt {
-  font-family: "Poppins", sans-serif;
-  color: #111111;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 44px;
-  line-height: 53px;
-}
-
-h2 {
-  font-size: 36px;
-  line-height: 43px;
-}
-
-h3, footer.main dt {
-  font-size: 18px;
-}
-
-body {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30px;
-  color: #15191e;
-}
-
-.btn {
-  display: inline-block;
-  border: 6px solid #fff;
-  background-color: #111111;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  padding: 5px 10px;
-  font-size: 18px;
-  width: fit-content;
-  height: 52px;
-}
-.btn:hover {
-  filter: invert(1);
-}
-
-.container {
-  padding: 25px;
-  width: clamp(360px, 100%, 1366px);
-  margin: 0 auto;
-}
-
 @keyframes expandHeader {
   0% {
     height: 72px;
@@ -168,6 +110,68 @@ body {
     transform: translateY(0px);
   }
 }
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3, footer.main dt {
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 53px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+h3, footer.main dt {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #15191e;
+}
+
+.btn {
+  display: inline-block;
+  border: 6px solid #fff;
+  background-color: #111111;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 5px 10px;
+  font-size: 18px;
+  width: fit-content;
+  height: 52px;
+}
+.btn:hover {
+  filter: invert(1);
+}
+
+.container {
+  padding: 25px;
+  width: clamp(360px, 100%, 1366px);
+  margin: 0 auto;
+}
+
+main {
+  margin-top: 72px;
+}
+
 header.main {
   background-color: #111111;
   position: fixed;
@@ -435,6 +439,8 @@ footer.main .current-menu-item a {
   word-spacing: 5px;
   letter-spacing: 5px;
   text-align: center;
+  font-size: 34px;
+  line-height: 43px;
 }
 .slider .item.active {
   animation-duration: 1s;
@@ -506,6 +512,10 @@ footer.main .current-menu-item a {
   }
   .slider .item .info {
     flex: 0 1 55%;
+  }
+  .slider .item h1 {
+    font-size: 44px;
+    line-height: 53px;
   }
 }
 

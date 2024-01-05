@@ -72,6 +72,11 @@ jQuery(function ($) {
 
 jQuery(function ($) {
 	const slider = $('#slider');
+
+	// if no slider element detected exit
+	if(!$(slider).length)
+		return;
+
 	let activeItem = parseInt($(slider).attr('active-item'));
 	let totalItem = $('#slider > div.item').length;
 	let animationFrameId;
@@ -82,7 +87,7 @@ jQuery(function ($) {
 		let now = Date.now();
 
 		if (now - lastTimestamp >= 10 * 1000) {
-		// if (false) {
+			// if (false) {
 			lastTimestamp = now;
 
 			if (dir === 'next') {

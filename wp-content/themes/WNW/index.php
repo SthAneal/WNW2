@@ -47,6 +47,13 @@ get_header();
         <img src="<?php path_to('/assets/images/icons/prev.png') ?>" alt="previous icon" id="prev" />
         <img src="<?php path_to('/assets/images/icons/next.png') ?>" alt="next icon" id="next" />
     </div>
+
+    <div>
+        <div class="container">
+            <div class="services"></div>
+            <div class="hours"></div>
+        </div>
+    </div>
 </main>
 
 <?php

@@ -52,6 +52,8 @@
             word-spacing: 5px;
             letter-spacing: 5px;
             text-align: center;
+            font-size: 34px;
+            line-height: 43px;
         }
 
         &.active {
@@ -147,6 +149,11 @@
 
             .info{
                 flex: 0 1 55%;
+            }
+
+            h1 {
+                font-size: 44px;
+                line-height: 53px;
             }
         }
     }

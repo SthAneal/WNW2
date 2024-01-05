@@ -10,64 +10,6 @@
     scroll-padding-top: 150px;
 }
 
-ul,
-ol {
-    list-style: none;
-}
-
-h1, h2, h3{
-    font-family: $type-face-secondary;
-    color: $color-primary;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-h1{
-    font-size: 44px;
-    line-height: 53px;
-}
-
-h2{
-    font-size: 36px;
-    line-height: 43px;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-body {
-    font-family: $type-face-primary;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 30px;
-    color: $color-body;
-}
-
-.btn{
-    display: inline-block;
-    border: 6px solid #fff;
-    background-color: $color-primary;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: $type-face-secondary;
-    font-weight: 400;
-    padding: 5px 10px;
-    font-size: 18px;
-    width: fit-content;
-    height: 52px;
-
-    &:hover{
-        filter: invert(1);
-    }
-}
-
-.container{
-    padding: 25px;
-    width: clamp(360px, 100%, 1366px);
-    margin: 0 auto;
-}
 
 @keyframes expandHeader {
     0%{
@@ -187,4 +129,67 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1, h2, h3{
+    font-family: $type-face-secondary;
+    color: $color-primary;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 44px;
+    line-height: 53px;
+}
+
+h2{
+    font-size: 36px;
+    line-height: 43px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+body {
+    font-family: $type-face-primary;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    color: $color-body;
+}
+
+.btn{
+    display: inline-block;
+    border: 6px solid #fff;
+    background-color: $color-primary;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $type-face-secondary;
+    font-weight: 400;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: fit-content;
+    height: 52px;
+
+    &:hover{
+        filter: invert(1);
+    }
+}
+
+.container{
+    padding: 25px;
+    width: clamp(360px, 100%, 1366px);
+    margin: 0 auto;
+}
+
+main{
+ margin-top: 72px;   
 }
