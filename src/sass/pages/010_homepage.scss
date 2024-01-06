@@ -178,6 +178,11 @@ main#home {
                     grid-template-columns: auto 50px 31px;
                     align-items: center;
 
+                    &:hover{
+                        background-color: rgb(190 190 190 / 12%);
+                    }
+
+
                     &__name {
                         margin-right: 10px;
                         text-transform: capitalize;
@@ -222,7 +227,7 @@ main#home {
     }
 
     .hours {
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #cccccc4d;
         padding-top: 25px;
     }
 
@@ -240,7 +245,7 @@ main#home {
             grid-template-columns: repeat(auto-fit, minmax(310px, 320px));
             justify-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 20px 10px;
             color: #fff;
 
             li{

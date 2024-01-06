@@ -155,6 +155,18 @@ h2 {
     font-size: 26px;
     line-height: 33px;
     margin-bottom: 20px;
+    width: fit-content;
+    position: relative;
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #f0cf85a8;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
 }
 
 h3 {

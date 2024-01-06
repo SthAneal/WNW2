@@ -4,12 +4,19 @@
                 alt="Whiskey & Whiskers logo" /></a> -->
 
         <dl class="in-touch">
+            <?php
+            $contactPageID = get_page_by_path('contact')->ID;
+            ?>
             <dt>contact us</dt>
-            <dd><a href="https://goo.gl/maps/pdoapPQsFM6iykhK7" target="_blank">
-                    104 Murray St, Hobart TAS, 7000
-                </a></dd>
-            <dd><a href="tel:+61451147736">Phone: +61451147736</a></dd>
-            <dd><a href="mailto:www.wnwbarbers.com">Email: www.wnwbarbers.com</a></dd>
+            <dd>
+                <a href=" <?php the_field('map_redirect_link', $contactPageID); ?>" target="_blank">
+                    <?php the_field('location', $contactPageID); ?>
+                </a>
+            </dd>
+            <dd><a href="tel:<?php the_field('phone', $contactPageID); ?>">Phone: <?php the_field('phone', $contactPageID); ?></a></dd>
+            <dd><a href="mailto:<?php the_field('email', $contactPageID); ?>"><?php the_field('email', $contactPageID); ?></a></dd>
+            <dd><?php the_field('opening_hours', $contactPageID);?></dd>
+
         </dl>
 
         <dl class="social">
@@ -27,7 +34,8 @@
                 while ($query->have_posts()):
                     $query->the_post();
                     ?>
-                    <a href="<?php the_field('link'); ?>" target="_blank"><img src="<?php  echo get_field('image')['url']; ?>"
+                    <a href="<?php the_field('link'); ?>" target="_blank"><img
+                            src="<?php echo get_field('image')['url']; ?>"
                             alt="<?php echo get_field('image')['alt']; ?>" /></a>
                     <?php
                 endwhile;
