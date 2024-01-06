@@ -1,5 +1,5 @@
 /* ---- site variables ---- */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Poppins:wght@200;400&family=Rubik+Doodle+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&family=Poppins:wght@200;400&family=Rubik+Doodle+Shadow&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +115,10 @@ ol {
   list-style: none;
 }
 
-h1, h2, h3, footer.main dt {
+h1,
+h2,
+h3,
+footer.main dt {
   font-family: "Poppins", sans-serif;
   color: #111111;
   font-weight: 400;
@@ -123,13 +126,14 @@ h1, h2, h3, footer.main dt {
 }
 
 h1 {
-  font-size: 44px;
-  line-height: 53px;
+  font-size: 34px;
+  line-height: 43px;
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 26px;
+  line-height: 33px;
+  margin-bottom: 20px;
 }
 
 h3, footer.main dt {
@@ -138,10 +142,15 @@ h3, footer.main dt {
 
 body {
   font-family: "Libre Franklin", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 28px;
   color: #15191e;
+  background-color: #f1f1f1;
+}
+
+strong {
+  font-weight: 600;
 }
 
 .btn {
@@ -163,7 +172,7 @@ body {
 }
 
 .container {
-  padding: 25px;
+  padding: 40px 25px;
   width: clamp(360px, 100%, 1366px);
   margin: 0 auto;
 }
@@ -172,6 +181,22 @@ main {
   margin-top: 72px;
 }
 
+@media screen and (min-width: 981px) {
+  h1 {
+    font-size: 44px;
+    line-height: 53px;
+  }
+  h3, footer.main dt {
+    font-size: 20px;
+  }
+  body {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .container {
+    padding: 60px 25px;
+  }
+}
 header.main {
   background-color: #111111;
   position: fixed;
@@ -330,7 +355,6 @@ header.main .booknow img {
   }
 }
 footer.main {
-  margin-top: 300px;
   background-color: #111111;
   font-size: 16px;
 }
@@ -516,6 +540,109 @@ footer.main .current-menu-item a {
   .slider .item h1 {
     font-size: 44px;
     line-height: 53px;
+  }
+}
+
+main#home .services-hours-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px 50px;
+}
+main#home .services .sln-datashortcode--services .sln-datalist {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 50px;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item {
+  display: grid;
+  grid-template-columns: auto 50px 31px;
+  align-items: center;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item__name {
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item__actions {
+  display: flex;
+  align-items: center;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item__actions > a {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item__actions > a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  background-color: #111;
+  background-image: url("../images/icons/booking.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item__image, main#home .services .sln-datashortcode--services .sln-datalist__item__description, main#home .services .sln-datashortcode--services .sln-datalist__item__duration, main#home .services .sln-datashortcode--services .sln-datalist__item__price > span:first-child {
+  display: none;
+}
+main#home .hours {
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+}
+main#home .products {
+  background-color: #232729;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main#home .products h2 {
+  color: #fff;
+}
+main#home .products ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 320px));
+  justify-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+}
+main#home .products ul li {
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.1803921569);
+  padding: 20px;
+  filter: opacity(0.5);
+}
+main#home .products ul li:hover {
+  filter: opacity(1);
+}
+main#home .products ul img {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (min-width: 981px) {
+  main#home .services .sln-datashortcode--services .sln-datalist {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1100px) {
+  main#home .services-hours-wrapper {
+    grid-template-columns: 300px minmax(320px, 65%);
+    justify-content: space-between;
+  }
+  main#home .hours {
+    order: -1;
+    border-top: none;
+    padding-top: 0;
   }
 }
 

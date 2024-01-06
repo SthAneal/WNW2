@@ -1,11 +1,11 @@
 <?php
 
 $site_key = 'WNW';
-$page_loading_first_time = true;
+// $page_loading_first_time = true;
 
-foreach (explode(" ", "plugins") as $req) {
-	require_once 'inc/'.$req.'.php';
-}
+// foreach (explode(" ", "plugins") as $req) {
+// 	require_once 'inc/'.$req.'.php';
+// }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
@@ -53,18 +53,18 @@ function acf_image($name, $className = '', $size, $id = -1) {
 }
 
 
-add_action( 'init', 'site_first_load_cookie' );
+// add_action( 'init', 'site_first_load_cookie' );
 
-function site_first_load_cookie() {
-	global $page_loading_first_time;
+// function site_first_load_cookie() {
+// 	global $page_loading_first_time;
 
-	if(isset($_COOKIE['isFirstLoad'])){
-		$page_loading_first_time = false;
-	}else{
-		$page_loading_first_time = true;
-		setcookie( 'isFirstLoad', true, time() + 600); //10 mins of expiry time
-	}
-}
+// 	if(isset($_COOKIE['isFirstLoad'])){
+// 		$page_loading_first_time = false;
+// 	}else{
+// 		$page_loading_first_time = true;
+// 		setcookie( 'isFirstLoad', true, time() + 600); //10 mins of expiry time
+// 	}
+// }
 
 // register menu
 add_action( 'after_setup_theme', 'register_my_menu' );
