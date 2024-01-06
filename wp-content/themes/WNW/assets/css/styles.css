@@ -563,7 +563,7 @@ main#home .services-hours-wrapper {
 main#home .services .sln-datashortcode--services .sln-datalist {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px 50px;
+  gap: 20px 10%;
 }
 main#home .services .sln-datashortcode--services .sln-datalist__item {
   display: grid;
