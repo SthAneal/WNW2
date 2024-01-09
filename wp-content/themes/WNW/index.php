@@ -69,7 +69,43 @@ get_header();
 
     <?php
     $args = array(
+        'post_type' => 'brands1',
+        'post_status' => 'publish',
+        'order' => 'asc',
+        'post_per_page' => '99'
+    );
+
+    $query = new WP_Query($args);
+    if ($query->have_posts()):
+        ?>
+
+    <div class="brands">
+        <div class="container">
+            <h2>Our Stock, Your Style</h2>
+            <ul>
+                <?php
+                    while($query->have_posts()):
+                        $query->the_post();
+                ?>
+                <li>
+                    <img src="<?php echo get_field('image')['url'] ?>" alt="<?php echo get_field('image')['alt'];  ?>"/>
+                </li>
+
+                <?php
+                    endwhile;
+                ?>
+            </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+
+
+
+
+    <?php
+    $args = array(
         'post_type' => 'products',
+        // 'post_type' => 'products1',
         'post_status' => 'publish',
         'order' => 'asc',
         'post_per_page' => '99'

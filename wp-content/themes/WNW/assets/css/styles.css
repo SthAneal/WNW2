@@ -19,7 +19,7 @@
   }
   100% {
     height: 100dvh;
-    background-color: rgba(0, 0, 0, 0.8901960784);
+    background-color: rgba(0, 0, 0, 0.9607843137);
   }
 }
 @keyframes closeHeader {
@@ -118,7 +118,8 @@ ol {
 h1,
 h2,
 h3,
-footer.main dt {
+footer.main dt,
+footer.main .other-links-wrapper > h3 {
   font-family: "Poppins", sans-serif;
   color: #111111;
   font-weight: 400;
@@ -147,7 +148,7 @@ h2::before {
   bottom: -2px;
 }
 
-h3, footer.main dt {
+h3, footer.main dt, footer.main .other-links-wrapper > h3 {
   font-size: 18px;
 }
 
@@ -165,7 +166,10 @@ strong {
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   border: 6px solid #fff;
   background-color: #111111;
   color: #fff;
@@ -197,7 +201,7 @@ main {
     font-size: 44px;
     line-height: 53px;
   }
-  h3, footer.main dt {
+  h3, footer.main dt, footer.main .other-links-wrapper > h3 {
     font-size: 20px;
   }
   body {
@@ -301,12 +305,6 @@ header.main .booknow::after {
   left: 99%;
   top: 0;
 }
-header.main .booknow .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 header.main .booknow img {
   width: 24px;
   height: 24px;
@@ -374,14 +372,14 @@ footer.main .container {
   grid-template-columns: 1fr;
   gap: 30px 20px;
 }
-footer.main h3,
+footer.main h3, footer.main .other-links-wrapper > h3,
 footer.main dt,
 footer.main dd,
 footer.main a {
   color: #fff;
   text-decoration: none;
 }
-footer.main dt {
+footer.main dt, footer.main .other-links-wrapper > h3, footer.main .other-links-wrapper > dt {
   margin-bottom: 10px;
 }
 footer.main .social a {
@@ -425,7 +423,7 @@ footer.main .current-menu-item a {
 
 .slider {
   width: 100%;
-  height: calc(100dvh - 72px);
+  height: 75dvh;
   background-color: #111111;
   position: relative;
   margin-top: 72px;
@@ -451,7 +449,7 @@ footer.main .current-menu-item a {
   background-blend-mode: overlay;
 }
 .slider .item img {
-  width: 270px;
+  width: 200px;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: contain;
@@ -543,15 +541,15 @@ footer.main .current-menu-item a {
     flex-direction: row;
   }
   .slider .item img {
-    width: 360px;
+    width: clamp(360px, 100%, 26%);
     padding: 20px;
   }
   .slider .item .info {
     flex: 0 1 55%;
   }
   .slider .item h1 {
-    font-size: 44px;
-    line-height: 53px;
+    font-size: 78px;
+    line-height: 85px;
   }
 }
 
@@ -572,6 +570,9 @@ main#home .services .sln-datashortcode--services .sln-datalist__item {
 }
 main#home .services .sln-datashortcode--services .sln-datalist__item:hover {
   background-color: rgba(190, 190, 190, 0.12);
+}
+main#home .services .sln-datashortcode--services .sln-datalist__item:hover > .sln-datalist__item__actions > a::before {
+  transform: scale(1.2);
 }
 main#home .services .sln-datashortcode--services .sln-datalist__item__name {
   margin-right: 10px;
@@ -594,11 +595,11 @@ main#home .services .sln-datashortcode--services .sln-datalist__item__actions > 
   width: 20px;
   height: 20px;
   padding: 5px;
-  background-color: #111;
   background-image: url("../images/icons/booking.png");
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
+  filter: invert(1);
 }
 main#home .services .sln-datashortcode--services .sln-datalist__item__image, main#home .services .sln-datashortcode--services .sln-datalist__item__description, main#home .services .sln-datashortcode--services .sln-datalist__item__duration, main#home .services .sln-datashortcode--services .sln-datalist__item__price > span:first-child {
   display: none;
@@ -606,6 +607,36 @@ main#home .services .sln-datashortcode--services .sln-datalist__item__image, mai
 main#home .hours {
   border-top: 1px solid rgba(204, 204, 204, 0.3019607843);
   padding-top: 25px;
+}
+main#home .brands {
+  background-color: #232729;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main#home .brands h2 {
+  color: #fff;
+}
+main#home .brands ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 175px);
+  justify-items: center;
+  justify-content: center;
+  gap: 20px 10px;
+}
+main#home .brands ul li {
+  background: rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  filter: opacity(0.5);
+}
+main#home .brands ul li:hover {
+  filter: opacity(1);
+}
+main#home .brands ul img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: invert(1);
 }
 main#home .products {
   background-color: #232729;

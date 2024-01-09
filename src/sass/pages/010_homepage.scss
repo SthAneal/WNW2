@@ -1,6 +1,7 @@
 .slider {
     width: 100%;
-    height: calc(100dvh - 72px);
+    // height: calc(100dvh - 72px);
+    height: 75dvh;
     background-color: $color-primary;
     position: relative;
     margin-top: 72px;
@@ -26,7 +27,8 @@
         background-blend-mode: overlay;
 
         img {
-            width: 270px;
+            // width: 270px;
+            width: 200px;
             height: auto;
             aspect-ratio: 1/1;
             object-fit: contain;
@@ -143,7 +145,8 @@
             flex-direction: row;
 
             img {
-                width: 360px;
+                // width: 360px;
+                width: clamp(360px, 100%, 26%);
                 padding: 20px;
             }
 
@@ -152,8 +155,8 @@
             }
 
             h1 {
-                font-size: 44px;
-                line-height: 53px;
+                font-size: 78px;
+                line-height: 85px;
             }
         }
     }
@@ -178,8 +181,12 @@ main#home {
                     grid-template-columns: auto 50px 31px;
                     align-items: center;
 
-                    &:hover{
+                    &:hover {
                         background-color: rgb(190 190 190 / 12%);
+
+                        > .sln-datalist__item__actions > a::before{
+                            transform: scale(1.2);
+                        }
                     }
 
 
@@ -205,11 +212,12 @@ main#home {
                                 width: 20px;
                                 height: 20px;
                                 padding: 5px;
-                                background-color: #111;
+                                // background-color: #111;
                                 background-image: url('../images/icons/booking.png');
                                 background-repeat: no-repeat;
                                 background-size: 20px;
                                 background-position: center;
+                                filter: invert(1);
                             }
                         }
                     }
@@ -231,16 +239,54 @@ main#home {
         padding-top: 25px;
     }
 
+    .brands {
+        background-color: #232729;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        h2 {
+            color: #fff;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 175px);
+            justify-items: center;
+            justify-content: center;
+            gap: 20px 10px;
+
+            li {
+                background: rgb(0 0 0 / 12%);
+                padding: 10px;
+                filter: opacity(0.5);
+
+                &:hover {
+                    filter: opacity(1);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center;
+                filter: invert(1);
+            }
+
+        }
+    }
+
+
     .products {
         background-color: #232729;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        
-        h2{
+
+        h2 {
             color: #fff;
         }
 
-        ul{
+        ul {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(310px, 320px));
             justify-items: center;
@@ -248,7 +294,7 @@ main#home {
             gap: 20px 10px;
             color: #fff;
 
-            li{
+            li {
                 max-width: 310px;
                 display: flex;
                 flex-direction: column;
@@ -260,12 +306,12 @@ main#home {
                 padding: 20px;
                 filter: opacity(0.5);
 
-                &:hover{
+                &:hover {
                     filter: opacity(1);
                 }
             }
 
-            img{
+            img {
                 width: 320px;
                 height: auto;
                 object-fit: contain;
@@ -274,6 +320,7 @@ main#home {
 
         }
     }
+
 
     @media screen and (min-width:981px) {
         .services {

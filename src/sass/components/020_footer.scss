@@ -20,7 +20,7 @@ footer.main {
         text-decoration: none
     }
 
-    dt {
+    dt, .other-links-wrapper > h3 {
         @extend h3;
         margin-bottom: 10px;
     }
