@@ -6,7 +6,7 @@ get_header();
   if (have_posts()):
     the_post();
     ?>
-    <div class="featrue-img-wrapper">
+    <div class="feature-img-wrapper">
       <img src="<?php echo get_field('feature_image')['url']; ?>" alt="<?php get_field('feature_image')['alt']; ?>" />
       <h1>
         <?php echo the_title(); ?>

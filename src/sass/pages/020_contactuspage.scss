@@ -1,0 +1,72 @@
+main#contactus {
+    .info {
+        background-color: #f1f1f1;        
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 30px 50px;
+    }
+
+    dt {
+        @extend h2;
+    }
+
+    dd a {
+        text-decoration: none;
+        font-weight: 600;
+        color: $color-body;
+
+        &:hover {
+            text-decoration: underline;
+            color: #e3bd6a;
+        }
+    }
+
+    .hours{
+        border-top: 1px solid #cccccc4d;
+        padding-top: 25px;
+    }
+
+    .social {
+        border-top: 1px solid #cccccc4d;
+        padding-top: 25px;
+
+        a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        dd {
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    .map{
+        box-shadow: 0px 4px 10px -1px #111;
+    }
+
+    @media screen and (min-width:981px) {
+        .container {
+            grid-template-columns: repeat(3, auto);
+        }
+
+        .social, .hours{
+            padding-top: 0;
+            border-top: none;
+        }
+    }
+}

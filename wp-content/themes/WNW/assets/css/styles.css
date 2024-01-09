@@ -117,6 +117,7 @@ ol {
 
 h1,
 h2,
+main#contactus dt,
 h3,
 footer.main dt,
 footer.main .other-links-wrapper > h3 {
@@ -136,14 +137,14 @@ h1 {
   line-height: 43px;
 }
 
-h2 {
+h2, main#contactus dt {
   font-size: 26px;
   line-height: 33px;
   margin-bottom: 20px;
   width: fit-content;
   position: relative;
 }
-h2::before {
+h2::before, main#contactus dt::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -199,6 +200,37 @@ strong {
 
 main {
   margin-top: 72px;
+}
+
+.feature-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75dvh;
+  position: relative;
+  margin-top: 72px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+  background-blend-mode: overlay;
+}
+.feature-img-wrapper img {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.feature-img-wrapper h1 {
+  opacity: 0;
+  transform: translateY(-200px);
+  animation-name: slideUp;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
 }
 
 p > a {
@@ -418,6 +450,14 @@ footer.main dd a:hover, footer.main .other-links-wrapper > div a:hover {
 footer.main .current-menu-item a {
   color: #F0CF85;
 }
+footer.main .copyright {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+  color: #e3bd6a;
+  background: #090908;
+}
 @media screen and (min-width: 981px) {
   footer.main .container {
     grid-template-columns: repeat(3, 1fr);
@@ -609,7 +649,7 @@ main#home .brands {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main#home .brands h2 {
+main#home .brands h2, main#home .brands main#contactus dt, main#contactus main#home .brands dt {
   color: #fff;
 }
 main#home .brands ul {
@@ -639,7 +679,7 @@ main#home .products {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main#home .products h2 {
+main#home .products h2, main#home .products main#contactus dt, main#contactus main#home .products dt {
   color: #fff;
 }
 main#home .products ul {
@@ -688,44 +728,61 @@ main#home .products ul img {
   }
 }
 
-main#page h2 {
-  display: block;
-  margin: auto;
+main#contactus .info {
+  background-color: #f1f1f1;
 }
-main#page section.gallery h2::before {
-  background-image: url(../images/icons/icon-gallery.png);
+main#contactus .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 30px 50px;
 }
-
-main#aboutus .featrue-img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 75dvh;
-  position: relative;
-  margin-top: 72px;
-  overflow: hidden;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4588235294);
-  background-blend-mode: overlay;
+main#contactus dd a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #15191e;
 }
-main#aboutus .featrue-img-wrapper img {
-  position: fixed;
-  inset: 0;
+main#contactus dd a:hover {
+  text-decoration: underline;
+  color: #e3bd6a;
+}
+main#contactus .hours {
+  border-top: 1px solid rgba(204, 204, 204, 0.3019607843);
+  padding-top: 25px;
+}
+main#contactus .social {
+  border-top: 1px solid rgba(204, 204, 204, 0.3019607843);
+  padding-top: 25px;
+}
+main#contactus .social a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+main#contactus .social a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
 }
-main#aboutus h1 {
-  opacity: 0;
-  transform: translateY(-200px);
-  animation-name: slideUp;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: forwards;
+main#contactus .social a:hover {
+  transform: scale(1.1);
 }
+main#contactus .social dd {
+  display: flex;
+  gap: 15px;
+}
+main#contactus .map {
+  box-shadow: 0px 4px 10px -1px #111;
+}
+@media screen and (min-width: 981px) {
+  main#contactus .container {
+    grid-template-columns: repeat(3, auto);
+  }
+  main#contactus .social, main#contactus .hours {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 main#aboutus .info {
   background-color: #f1f1f1;
 }
@@ -735,7 +792,7 @@ main#aboutus .info .container {
   grid-template-areas: "title" "image" "content";
   align-items: center;
 }
-main#aboutus .info .container h2 {
+main#aboutus .info .container h2, main#aboutus .info .container main#contactus dt, main#contactus main#aboutus .info .container dt {
   grid-area: title;
   height: fit-content;
 }
@@ -760,7 +817,7 @@ main#aboutus .info .container p:not(:last-of-type) {
     grid-template-areas: "title image" "content image";
     gap: 20px 50px;
   }
-  main#aboutus .info .container h2 {
+  main#aboutus .info .container h2, main#aboutus .info .container main#contactus dt, main#contactus main#aboutus .info .container dt {
     margin-bottom: 0px;
   }
   main#aboutus .info .container img {

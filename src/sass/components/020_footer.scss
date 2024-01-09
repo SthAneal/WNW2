@@ -61,6 +61,15 @@ footer.main {
         color: $color-secondary;
     }
 
+    .copyright{
+        font-family: $type-face-secondary;
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 0;
+        color: #e3bd6a;
+        background: #090908;
+    }
+
     @media screen and (min-width:981px) {
         .container{
             grid-template-columns: repeat(3,1fr);

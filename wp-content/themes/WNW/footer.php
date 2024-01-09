@@ -5,7 +5,7 @@
 
         <dl class="in-touch">
             <?php
-            $contactPageID = get_page_by_path('contact')->ID;
+            $contactPageID = get_page_by_path('contact-us')->ID;
             ?>
             <dt>contact us</dt>
             <dd>
@@ -14,7 +14,7 @@
                 </a>
             </dd>
             <dd><a href="tel:<?php the_field('phone', $contactPageID); ?>">Phone: <?php the_field('phone', $contactPageID); ?></a></dd>
-            <dd><a href="mailto:<?php the_field('email', $contactPageID); ?>"><?php the_field('email', $contactPageID); ?></a></dd>
+            <dd><a href="mailto:<?php the_field('email', $contactPageID); ?>">Email: <?php the_field('email', $contactPageID); ?></a></dd>
             <dd><?php the_field('opening_hours', $contactPageID);?></dd>
 
         </dl>
@@ -56,6 +56,10 @@
                 )
             ); ?>
         </div>
+    </div>
+
+    <div class="copyright">
+        &copy; Copyright Whiskey & Whiskers Barber Shop 2024
     </div>
 </footer>
 

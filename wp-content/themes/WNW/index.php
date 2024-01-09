@@ -62,7 +62,7 @@ get_header();
             <h2>Hours</h2>
             <?php
             // $contactPage = get_page_by_path('contact');
-            the_field('opening_hours', get_page_by_path('contact')->ID);
+            the_field('opening_hours', get_page_by_path('contact-us')->ID);
             ?>
         </div>
     </div>
