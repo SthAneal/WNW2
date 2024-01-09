@@ -8,7 +8,7 @@ get_header();
   ):
     the_post();
     ?>
-    <section class="container <?php echo basename(get_permalink()); ?>">
+    <div class="container <?php echo basename(get_permalink()); ?>">
       <h2 class="main">
         <?php echo the_title(); ?>
       </h2>
@@ -19,7 +19,7 @@ get_header();
         ?>
       </div>
       <?php endif; ?>
-    </section>
+    </div>
     <?php
   endwhile;
   ?>

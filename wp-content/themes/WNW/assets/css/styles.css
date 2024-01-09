@@ -127,6 +127,11 @@ footer.main .other-links-wrapper > h3 {
 }
 
 h1 {
+  color: #fff;
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  text-align: center;
   font-size: 34px;
   line-height: 43px;
 }
@@ -196,10 +201,14 @@ main {
   margin-top: 72px;
 }
 
+p > a {
+  color: #e3bd6a;
+}
+
 @media screen and (min-width: 981px) {
   h1 {
-    font-size: 44px;
-    line-height: 53px;
+    font-size: 78px;
+    line-height: 85px;
   }
   h3, footer.main dt, footer.main .other-links-wrapper > h3 {
     font-size: 20px;
@@ -467,15 +476,6 @@ footer.main .current-menu-item a {
   opacity: 0;
   transform: translateY(-200px);
 }
-.slider .item h1 {
-  color: #fff;
-  font-family: "Rubik Doodle Shadow", sans-serif;
-  word-spacing: 5px;
-  letter-spacing: 5px;
-  text-align: center;
-  font-size: 34px;
-  line-height: 43px;
-}
 .slider .item.active {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -546,10 +546,6 @@ footer.main .current-menu-item a {
   }
   .slider .item .info {
     flex: 0 1 55%;
-  }
-  .slider .item h1 {
-    font-size: 78px;
-    line-height: 85px;
   }
 }
 
@@ -698,6 +694,78 @@ main#page h2 {
 }
 main#page section.gallery h2::before {
   background-image: url(../images/icons/icon-gallery.png);
+}
+
+main#aboutus .featrue-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75dvh;
+  position: relative;
+  margin-top: 72px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+  background-blend-mode: overlay;
+}
+main#aboutus .featrue-img-wrapper img {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+main#aboutus h1 {
+  opacity: 0;
+  transform: translateY(-200px);
+  animation-name: slideUp;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+main#aboutus .info {
+  background-color: #f1f1f1;
+}
+main#aboutus .info .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "image" "content";
+  align-items: center;
+}
+main#aboutus .info .container h2 {
+  grid-area: title;
+  height: fit-content;
+}
+main#aboutus .info .container img {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 30px;
+}
+main#aboutus .info .container > div {
+  grid-area: content;
+}
+main#aboutus .info .container p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 981px) {
+  main#aboutus .info .container {
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "title image" "content image";
+    gap: 20px 50px;
+  }
+  main#aboutus .info .container h2 {
+    margin-bottom: 0px;
+  }
+  main#aboutus .info .container img {
+    margin-bottom: 0px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

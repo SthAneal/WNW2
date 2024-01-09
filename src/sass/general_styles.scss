@@ -147,6 +147,13 @@ h3 {
 }
 
 h1 {
+    // font-size: 34px;
+    // line-height: 43px;
+    color: #fff;
+    font-family: $type-face-tertiary;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    text-align: center;
     font-size: 34px;
     line-height: 43px;
 }
@@ -220,17 +227,15 @@ main {
     margin-top: 72px;
 }
 
+p > a{
+    color: #e3bd6a;
+}
+
 @media screen and (min-width:981px) {
     h1 {
-        font-size: 44px;
-        line-height: 53px;
+        font-size: 78px;
+        line-height: 85px;
     }
-
-    // h2 {
-    //     font-size: 26px;
-    //     line-height: 33px;
-    //     margin-bottom: 20px;
-    // }
 
     h3 {
         font-size: 20px;
