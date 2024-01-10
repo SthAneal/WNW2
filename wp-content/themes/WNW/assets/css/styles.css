@@ -825,4 +825,119 @@ main#aboutus .info .container p:not(:last-of-type) {
   }
 }
 
+main#gallerypage h2, main#gallerypage main#contactus dt, main#contactus main#gallerypage dt {
+  margin: 0 auto 50px;
+}
+main#gallerypage figure.wp-block-gallery {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(107px, auto));
+  gap: 20px;
+}
+main#gallerypage figure.wp-block-gallery > figure {
+  width: 100% !important;
+  height: 100%;
+  min-height: 119px !important;
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 5px;
+}
+main#gallerypage figure.wp-block-gallery > figure:hover {
+  transform: scale(1.03);
+}
+main#gallerypage figure.wp-block-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+main#gallerypage figure.wp-block-gallery figcaption {
+  visibility: hidden;
+}
+main#gallerypage dialog#galleryDialog {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  gap: 30px;
+}
+main#gallerypage dialog#galleryDialog[open] {
+  display: flex;
+}
+main#gallerypage dialog#galleryDialog > img, main#gallerypage dialog#galleryDialog .image-caption {
+  width: clamp(320px, 100%, 700px);
+  backdrop-filter: blur(2px);
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+main#gallerypage dialog#galleryDialog .image-caption {
+  text-align: center;
+  color: #fff;
+  text-transform: initial;
+}
+main#gallerypage dialog#galleryDialog .controls {
+  position: absolute;
+  inset: 6px 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 15px);
+}
+main#gallerypage dialog#galleryDialog .controls button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 10px);
+  background-color: transparent;
+  border: none;
+  filter: drop-shadow(0px 2px 3px black);
+  z-index: 3;
+}
+main#gallerypage dialog#galleryDialog .controls button:active, main#gallerypage dialog#galleryDialog .controls button:focus {
+  outline: none;
+}
+main#gallerypage dialog#galleryDialog .controls button:hover {
+  transform: scale(1.3);
+}
+main#gallerypage dialog#galleryDialog .controls button[value=prev] {
+  left: 0px;
+}
+main#gallerypage dialog#galleryDialog .controls button[value=next] {
+  right: 0px;
+}
+main#gallerypage dialog#galleryDialog .controls button[value=close] {
+  right: 10px;
+  top: 0;
+}
+main#gallerypage dialog#galleryDialog .controls button > img {
+  width: 100%;
+  height: 100%;
+}
+main#gallerypage dialog#galleryDialog::backdrop {
+  background: rgba(0, 0, 0, 0.61);
+}
+@media screen and (min-width: 768px) {
+  main#gallerypage figure.wp-block-gallery {
+    padding: 0 70px 41px;
+    grid-template-columns: repeat(3, minmax(107px, auto));
+  }
+  main#gallerypage figure.wp-block-gallery > figure {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 981px) {
+  main#gallerypage figure.wp-block-gallery {
+    grid-template-columns: repeat(4, minmax(107px, auto));
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,65 +1,3 @@
-// jQuery(function ($) {
-// 	$(window).on("scroll", function () {
-// 		if ($(window).scrollTop() > 100) {
-// 			$("header.main").addClass("fixed");
-// 			// $('header.main .logo > img:last-of-type').fadeOut("slow");
-// 		} else {
-// 			$("header.main").removeClass("fixed");
-// 			// $('header.main nav .logo img:last-of-type').fadeIn("slow");
-// 		}
-// 	});
-// });
-
-
-// jQuery(function ($) {
-// 	const services = document.querySelectorAll("#service .services > dl");
-// 	const hours = document.querySelectorAll("#hours dl > div");
-// 	const contact = document.querySelectorAll("#contact > div");
-// 	const products = document.querySelectorAll("#product .products > dl");
-
-
-// 	function callback(entries, observer) {
-// 		entries.forEach((entry) => {
-// 			if (entry.isIntersecting) {
-// 				entry.target.classList.add("fadeIn");
-// 			}
-// 			// else {
-// 			// 	// console.log("not fully visible");
-// 			// 	// entry.target.classList.add("fadeOut");
-// 			// 	// entry.target.classList.remove("fadeIn");
-// 			// }
-// 		});
-// 	}
-// 	function createObserver(targets, callback) {
-// 		const options = {
-// 			root: null,
-// 			threshold: 0,
-// 		};
-// 		const observer = new IntersectionObserver(callback, options);
-// 		targets.forEach((target) => {
-// 			observer.observe(target);
-// 		});
-// 	}
-
-// 	createObserver(services, callback);
-// 	createObserver(products, callback);
-// 	createObserver(hours, callback);
-// 	createObserver(contact, callback);
-// });
-
-// jQuery(function ($) {
-// 	$('.bubble').parent().hover(function (e) {
-// 		var relX = e.pageX - $(this).offset().left;
-// 		var relY = e.pageY - $(this).offset().top;
-// 		// $(this).children('.bubble').css({"left":relX+"px", "top":relY+"px"});
-// 		$(this).css("overflow", "hidden");
-// 		$(this).children('.bubble').css({ "left": relX + "px", "top": relY + "px", "height": $(this).height() * 4, "width": $(this).width() * 4 });
-// 	}, function () {
-// 		$(this).children('.bubble').css({ "height": "0px", "width": "0px" });
-// 	})
-// });
-
-
 jQuery(function ($) {
 
 	$('#hamburger img').on('click', function () {
@@ -74,7 +12,7 @@ jQuery(function ($) {
 	const slider = $('#slider');
 
 	// if no slider element detected exit
-	if(!$(slider).length)
+	if (!$(slider).length)
 		return;
 
 	let activeItem = parseInt($(slider).attr('active-item'));
@@ -121,5 +59,54 @@ jQuery(function ($) {
 		dir = 'next';
 		animationFrameId = requestAnimationFrame(playSlider);
 
+	});
+});
+
+// gallery
+jQuery(function ($) {
+	// to hold image srcs
+	const imagesList = [];
+
+	// to hold the current image index
+	let currentImage;
+
+	// get reference of the galleryDialog
+	const galleryDialog = document.getElementById('galleryDialog');
+
+	// reference of target where image is to be displayed
+	const imgTarget = $('#galleryDialog > img');
+	const captionTarget = $('#galleryDialog > .image-caption');
+
+	// getting list of all image
+	$('figure.wp-block-gallery > figure').each((i, elm) => {
+		imagesList.push({src:$(elm).children('img').attr('src'), caption:$(elm).children('figcaption').text()});
+
+		$(elm).on('click', function () {
+			let imgIndex = imagesList.findIndex(imgObj=>imgObj.src===$(this).children('img').attr('src'));
+			galleryDialog.showModal();
+			updateImage(imgIndex);
+		});
+	});
+
+	// Updating the current image
+	function updateImage(imgIndex) {
+		currentImage = imgIndex < 0 ? imagesList.length - 1 : imgIndex >= imagesList.length ? 0 : imgIndex;
+		imgTarget.attr('src', imagesList[currentImage].src);
+		captionTarget.text(imagesList[currentImage].caption)
+	}
+
+	// closing the modal
+	$('button[value="close"], .controls').on('click', function () {
+		galleryDialog.close();
+	});
+
+	$('button[value="prev"]').on('click', function (e) {
+		e.stopPropagation();
+		updateImage(currentImage - 1);
+	});
+
+	$('button[value="next"]').on('click', function (e) {
+		e.stopPropagation();
+		updateImage(currentImage + 1);
 	});
 });

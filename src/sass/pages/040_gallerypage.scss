@@ -1,0 +1,146 @@
+main#gallerypage {
+
+    h2 {
+        margin: 0 auto 50px;
+    }
+
+    figure.wp-block-gallery {
+        width: 100%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(107px, auto));
+        gap: 20px;
+
+        >figure {
+            width: 100% !important;
+            height: 100%;
+            min-height: 119px !important;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            background-color: #fff;
+            padding: 5px;
+
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain !important;
+        }
+
+        figcaption {
+            visibility: hidden;
+        }
+    }
+
+    dialog#galleryDialog {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        border: none;
+        background-color: transparent;
+        overflow: hidden;
+        gap: 30px;
+
+        &[open] {
+            display: flex;
+        }
+
+        >img, .image-caption {
+            width: clamp(320px, 100%, 700px);
+            backdrop-filter: blur(2px);
+            height: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .image-caption{
+            text-align: center;
+            color: #fff;
+            text-transform: initial;
+        }
+
+        .controls {
+            position: absolute;
+            inset: 6px 5px;
+            width: calc(100% - 10px);
+            height: calc(100% - 15px);
+        }
+
+        .controls button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            top: calc(50% - 10px);
+            background-color: transparent;
+            border: none;
+            filter: drop-shadow(0px 2px 3px black);
+            z-index: 3;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                transform: scale(1.3);
+            }
+
+            &[value=prev] {
+                left: 0px;
+            }
+
+            &[value=next] {
+                right: 0px;
+            }
+
+            &[value=close] {
+                right: 10px;
+                top: 0;
+            }
+
+            >img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &::backdrop {
+            background: rgb(0 0 0 / 61%);
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+        figure.wp-block-gallery {
+            padding: 0 70px 41px;
+            grid-template-columns: repeat(3, minmax(107px, auto));
+
+            >figure {
+                min-height: 300px;
+            }
+        }
+    }
+
+    @media screen and (min-width:981px) {
+        figure.wp-block-gallery {
+            grid-template-columns: repeat(4, minmax(107px, auto));
+        }
+    }
+}
+
+// @media screen and (min-width: 1151px) {
+//     #gallerypage ul {
+//         padding: 0 280px 41px;
+//     }
+// }
