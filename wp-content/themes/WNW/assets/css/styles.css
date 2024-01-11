@@ -504,7 +504,7 @@ footer.main .copyright {
   object-fit: contain;
   object-position: center;
   opacity: 0;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(4px);
 }
 .slider .item .info {
   display: flex;
@@ -833,7 +833,6 @@ main#gallerypage figure.wp-block-gallery {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(107px, auto));
-  gap: 20px;
 }
 main#gallerypage figure.wp-block-gallery > figure {
   width: 100% !important;
@@ -844,16 +843,15 @@ main#gallerypage figure.wp-block-gallery > figure {
   cursor: pointer;
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  background-color: #111;
   padding: 5px;
 }
 main#gallerypage figure.wp-block-gallery > figure:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 main#gallerypage figure.wp-block-gallery img {
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
 }
 main#gallerypage figure.wp-block-gallery figcaption {
   visibility: hidden;
@@ -923,7 +921,7 @@ main#gallerypage dialog#galleryDialog .controls button > img {
   height: 100%;
 }
 main#gallerypage dialog#galleryDialog::backdrop {
-  background: rgba(0, 0, 0, 0.61);
+  background: rgba(0, 0, 0, 0.85);
 }
 @media screen and (min-width: 768px) {
   main#gallerypage figure.wp-block-gallery {

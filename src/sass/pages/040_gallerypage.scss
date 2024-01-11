@@ -9,7 +9,6 @@ main#gallerypage {
         list-style: none;
         display: grid;
         grid-template-columns: repeat(2, minmax(107px, auto));
-        gap: 20px;
 
         >figure {
             width: 100% !important;
@@ -20,18 +19,18 @@ main#gallerypage {
             cursor: pointer;
             position: relative;
             z-index: 1;
-            background-color: #fff;
+            background-color: #111;
             padding: 5px;
 
             &:hover{
-                transform: scale(1.03);
+                transform: scale(1.02);
             }
         }
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: contain !important;
+            // object-fit: contain !important;
         }
 
         figcaption {
@@ -116,7 +115,7 @@ main#gallerypage {
         }
 
         &::backdrop {
-            background: rgb(0 0 0 / 61%);
+            background:rgb(0 0 0 / 85%);
         }
 
     }
