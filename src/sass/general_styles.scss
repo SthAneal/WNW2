@@ -165,7 +165,7 @@ h2 {
     width: fit-content;
     position: relative;
 
-    &::before{
+    &:not(.sln-salon-title, .salon-step-title, .sln-thankyou__status)::before{
         content: '';
         width: 100%;
         height: 2px;

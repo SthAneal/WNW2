@@ -1,0 +1,14 @@
+main#thankyouforyourbookingpage {
+    .container{
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1{
+        color: $color-body;
+    }
+
+}

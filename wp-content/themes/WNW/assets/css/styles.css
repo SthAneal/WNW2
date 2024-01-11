@@ -144,7 +144,7 @@ h2, main#contactus dt {
   width: fit-content;
   position: relative;
 }
-h2::before, main#contactus dt::before {
+h2:not(.sln-salon-title, .salon-step-title, .sln-thankyou__status)::before, main#contactus dt:not(.sln-salon-title, .salon-step-title, .sln-thankyou__status)::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -171,7 +171,29 @@ strong {
   font-weight: 600;
 }
 
-.btn {
+.btn, main#bookingpage .sln-stepper .step.step--active .step-number,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage .sln-btn--emphasis,
+main#bookingpage #sln-salon.sln-loginform:not(.sln-customcolors) #loginform #wp-submit,
+main#bookingpage #sln-salon .sln-btn--emphasis,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis,
+main#bookingpage .sln-salon-page:not(.sln-salon-page-customcolors) .select2-container.select2-container--sln .select2-results__option[aria-selected=true],
+main#bookingpage .sln-radiobox input:checked + label:after,
+main#bookingpage .sln-radiobox input:checked + label:hover:after,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--nobkg,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly,
+main#bookingpage #sln-salon .sln-btn--prevstep .sln-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +210,23 @@ strong {
   width: fit-content;
   height: 52px;
 }
-.btn:hover {
+.btn:hover, main#bookingpage .sln-stepper .step.step--active .step-number:hover,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover:focus,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover:active,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-btn--emphasis:hover,
+main#bookingpage #sln-salon.sln-loginform:not(.sln-customcolors) #loginform #wp-submit:hover,
+main#bookingpage #sln-salon .sln-btn--emphasis:hover,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis:hover,
+main#bookingpage .sln-salon-page:not(.sln-salon-page-customcolors) .select2-container.select2-container--sln .select2-results__option[aria-selected=true]:hover,
+main#bookingpage .sln-radiobox input:checked + label:hover:after,
+main#bookingpage .sln-radiobox input:checked + label:hover:after,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--nobkg:hover,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly:hover,
+main#bookingpage #sln-salon .sln-btn--prevstep .sln-btn:hover {
   filter: invert(1);
 }
 
@@ -261,7 +299,7 @@ header.main {
   width: 100%;
   height: 72px;
   overflow: hidden;
-  z-index: 11;
+  z-index: 1000;
 }
 header.main .container {
   display: grid;
@@ -936,6 +974,172 @@ main#gallerypage dialog#galleryDialog::backdrop {
   main#gallerypage figure.wp-block-gallery {
     grid-template-columns: repeat(4, minmax(107px, auto));
   }
+}
+
+main#bookingpage #sln-salon {
+  margin: 0 auto;
+}
+main#bookingpage #sln-salon h1,
+main#bookingpage #sln-salon h2,
+main#bookingpage #sln-salon main#contactus dt,
+main#contactus main#bookingpage #sln-salon dt,
+main#bookingpage #sln-salon h3,
+main#bookingpage #sln-salon footer.main dt,
+footer.main main#bookingpage #sln-salon dt,
+main#bookingpage #sln-salon h5,
+main#bookingpage #sln-salon .sln-salon-title {
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main#bookingpage #sln-salon h5 {
+  color: #F0CF85;
+}
+main#bookingpage #sln-salon button,
+main#bookingpage #sln-salon select {
+  text-transform: uppercase;
+}
+main#bookingpage .sln-list .sln-list__item,
+main#bookingpage #sln-salon .sln-list .sln-list__item {
+  max-width: 100%;
+}
+main#bookingpage #sln-salon.sln-step-date #sln-notifications.sln-notifications--active .sln-alert.sln-alert--wait {
+  background-color: #F0CF85;
+}
+main#bookingpage .sln-loader::before,
+main#bookingpage #sln-salon.sln-step-date #sln-notifications.sln-notifications--active::before,
+main#bookingpage #sln-salon.sln-step-date #sln-debug-notifications.sln-notifications--active::before {
+  color: #F0CF85;
+}
+main#bookingpage .sln-radiobox input + label:before,
+main#bookingpage #sln-salon.sln-loginform #loginform .login-remember label:before,
+main#bookingpage .sln-checkbox input + label:before,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly {
+  border-color: #F0CF85;
+}
+main#bookingpage .sln-steps-name,
+main#bookingpage .sln-alert.sln-alert--wait::after,
+main#bookingpage .sln-alert--wait::after,
+main#bookingpage .sln-alert a,
+main#bookingpage #sln-salon .alert a,
+main#bookingpage #sln-salon.sln-loginform #loginform .login-remember label.is-checked:after,
+main#bookingpage #sln-salon.sln-loginform #loginform .login-remember label.is-checked:hover:after,
+main#bookingpage .sln-checkbox input:checked + label:after,
+main#bookingpage .sln-checkbox input:checked + label:hover:after,
+main#bookingpage #sln-salon .sln_datepicker:hover:after,
+main#bookingpage #sln-salon .sln_timepicker:hover:after,
+main#bookingpage #sln-salon #sln-salon-my-account .sln_datepicker:hover:after,
+main#bookingpage #sln-salon #sln-salon-my-account .sln_timepicker:hover:after,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading,
+main#bookingpage .sln-text--emphasis,
+main#bookingpage .sln-steps-name:hover,
+main#bookingpage .sln-alert a:hover,
+main#bookingpage #sln-salon .alert a:hover,
+main#bookingpage #sln-salon.sln-loginform #loginform .login-remember label:hover:after,
+main#bookingpage .sln-checkbox input + label:hover:after,
+main#bookingpage .sln-text--emphasis--hoverk {
+  color: #F0CF85;
+}
+main#bookingpage #sln-salon .sln-progbar .sln-progbar__item--current,
+main#bookingpage #sln-salon .sln-progbar .sln-progbar__item--current ~ .sln-progbar__item {
+  background-color: #F0CF85;
+}
+main#bookingpage .sln-stepper .step.step--active .step-number,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:hover,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:focus,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:active,
+main#bookingpage .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage #sln-salon .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled,
+main#bookingpage .sln-btn--emphasis,
+main#bookingpage #sln-salon.sln-loginform:not(.sln-customcolors) #loginform #wp-submit,
+main#bookingpage #sln-salon .sln-btn--emphasis,
+main#bookingpage .sln-bootstrap .sln-btn--emphasis,
+main#bookingpage .sln-salon-page:not(.sln-salon-page-customcolors) .select2-container.select2-container--sln .select2-results__option[aria-selected=true],
+main#bookingpage .sln-radiobox input:checked + label:after,
+main#bookingpage .sln-radiobox input:checked + label:hover:after,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--nobkg,
+main#bookingpage #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly,
+main#bookingpage #sln-salon .sln-btn--prevstep .sln-btn {
+  width: 100%;
+  border-radius: 0;
+  border-color: rgba(255, 255, 255, 0.8509803922);
+}
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.hour:not(.disabled):not(.active),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.month:not(.disabled):not(.active),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.year:not(.disabled):not(.active),
+main#bookingpage #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled),
+main#bookingpage #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.hour:not(.disabled):not(.active),
+main#bookingpage #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active),
+main#bookingpage #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.month:not(.disabled):not(.active),
+main#bookingpage #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.year:not(.disabled):not(.active) {
+  color: #F0CF85;
+}
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute.active:not(.disabled),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):hover {
+  background-color: #111;
+}
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active):hover,
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td.day.active:not(.disabled),
+main#bookingpage #sln-salon .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled):hover {
+  background-color: #111;
+  color: #fff;
+}
+main#bookingpage #sln-salon:not(.sln-customcolors) .sln-input input:focus, main#bookingpage #sln-salon:not(.sln-customcolors) .sln-input input:active, main#bookingpage #sln-salon:not(.sln-customcolors) .sln-input input:hover,
+main#bookingpage #sln-salon textarea.sln-input:focus,
+main#bookingpage #sln-salon textarea.sln-input:active,
+main#bookingpage #sln-salon textarea.sln-input:hover {
+  outline-color: #F0CF85;
+  border-color: #F0CF85;
+}
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item.active .sln-summary__tabs__toggle,
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item .sln-summary__tabs__toggle:hover {
+  color: #F0CF85;
+}
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item.active .sln-summary__tabs__toggle::before,
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item .sln-summary__tabs__toggle:hover::before {
+  filter: invert(1);
+}
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item.active .sln-summary__tabs__toggle::after,
+main#bookingpage #sln-salon .sln-summary .sln-summary__tabs__nav__item .sln-summary__tabs__toggle:hover::after {
+  background-color: #F0CF85;
+}
+@media only screen and (max-width: 599px) {
+  main#bookingpage .sln-box__bottombar,
+  main#bookingpage #sln-salon .sln-box__bottombar {
+    background-color: #f5e1b6;
+    background-color: hsla(41.5, 78.1%, 73.14%, 0.61);
+  }
+  main#bookingpage .sln-box__bottombar .sln-box__bottombar__fkbg, main#bookingpage .sln-box__bottombar .sln-box__bottombar__fkbg::before,
+  main#bookingpage #sln-salon .sln-box__bottombar .sln-box__bottombar__fkbg,
+  main#bookingpage #sln-salon .sln-box__bottombar .sln-box__bottombar__fkbg::before {
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 992px) {
+  main#bookingpage #sln-salon.sln-salon--l {
+    max-width: 100%;
+  }
+}
+
+main#thankyouforyourbookingpage .container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main#thankyouforyourbookingpage h1 {
+  color: #15191e;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main id="home">
+<main id="bookingpage">
     <div class="container">
         <?php
             the_content();

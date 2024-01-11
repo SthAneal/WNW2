@@ -1,0 +1,186 @@
+main#bookingpage {
+    #sln-salon {
+        margin: 0 auto;
+
+        h1,
+        h2,
+        h3,
+        h5,
+        .sln-salon-title {
+            font-family: $type-face-secondary;
+            color: $color-primary;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            color: $color-secondary;
+        }
+
+        button,
+        select {
+            text-transform: uppercase;
+        }
+    }
+
+    .sln-list .sln-list__item,
+    #sln-salon .sln-list .sln-list__item {
+        max-width: 100%;
+    }
+
+    #sln-salon.sln-step-date #sln-notifications.sln-notifications--active .sln-alert.sln-alert--wait {
+        background-color: $color-secondary;
+    }
+
+    .sln-loader::before,
+    #sln-salon.sln-step-date #sln-notifications.sln-notifications--active::before,
+    #sln-salon.sln-step-date #sln-debug-notifications.sln-notifications--active::before {
+        color: $color-secondary;
+    }
+
+    .sln-radiobox input+label:before,
+    #sln-salon.sln-loginform #loginform .login-remember label:before,
+    .sln-checkbox input+label:before,
+    #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly {
+        border-color: $color-secondary;
+    }
+
+
+    .sln-steps-name,
+    .sln-alert.sln-alert--wait::after,
+    .sln-alert--wait::after,
+    .sln-alert a,
+    #sln-salon .alert a,
+    #sln-salon.sln-loginform #loginform .login-remember label.is-checked:after,
+    #sln-salon.sln-loginform #loginform .login-remember label.is-checked:hover:after,
+    .sln-checkbox input:checked+label:after,
+    .sln-checkbox input:checked+label:hover:after,
+    #sln-salon .sln_datepicker:hover:after,
+    #sln-salon .sln_timepicker:hover:after,
+    #sln-salon #sln-salon-my-account .sln_datepicker:hover:after,
+    #sln-salon #sln-salon-my-account .sln_timepicker:hover:after,
+    #sln-salon .sln-panel .sln-panel-heading,
+    .sln-text--emphasis,
+    .sln-steps-name:hover,
+    .sln-alert a:hover,
+    #sln-salon .alert a:hover,
+    #sln-salon.sln-loginform #loginform .login-remember label:hover:after,
+    .sln-checkbox input+label:hover:after,
+    .sln-text--emphasis--hoverk {
+        color: $color-secondary;
+    }
+
+
+    #sln-salon .sln-progbar .sln-progbar__item--current,
+    #sln-salon .sln-progbar .sln-progbar__item--current~.sln-progbar__item {
+        background-color: $color-secondary;
+    }
+
+    .sln-stepper .step.step--active .step-number,
+    .sln-btn--emphasis.sln-btn--disabled:hover,
+    .sln-btn--emphasis.sln-btn--disabled:focus,
+    .sln-btn--emphasis.sln-btn--disabled:active,
+    #sln-salon .sln-btn--emphasis.sln-btn--disabled:hover,
+    #sln-salon .sln-btn--emphasis.sln-btn--disabled:focus,
+    #sln-salon .sln-btn--emphasis.sln-btn--disabled:active,
+    .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:hover,
+    .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:focus,
+    .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled:active,
+    .sln-btn--emphasis.sln-btn--disabled,
+    #sln-salon .sln-btn--emphasis.sln-btn--disabled,
+    .sln-bootstrap .sln-btn--emphasis.sln-btn--disabled,
+    .sln-btn--emphasis,
+    #sln-salon.sln-loginform:not(.sln-customcolors) #loginform #wp-submit,
+    #sln-salon .sln-btn--emphasis,
+    .sln-bootstrap .sln-btn--emphasis,
+    .sln-salon-page:not(.sln-salon-page-customcolors) .select2-container.select2-container--sln .select2-results__option[aria-selected=true],
+    .sln-radiobox input:checked+label:after,
+    .sln-radiobox input:checked+label:hover:after,
+    #sln-salon .sln-panel .sln-panel-heading .sln-btn--nobkg,
+    #sln-salon .sln-panel .sln-panel-heading .sln-btn--borderonly,
+    #sln-salon .sln-btn--prevstep .sln-btn {
+        @extend .btn;
+        width: 100%;
+        border-radius: 0;
+        border-color: #ffffffd9;
+    }
+
+
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.hour:not(.disabled):not(.active),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.month:not(.disabled):not(.active),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.year:not(.disabled):not(.active),
+    #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled),
+    #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.hour:not(.disabled):not(.active),
+    #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active),
+    #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.month:not(.disabled):not(.active),
+    #sln-salon #sln-salon-my-account .datetimepicker.sln-datetimepicker table tr td span.year:not(.disabled):not(.active) {
+        color: $color-secondary;
+    }
+
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute.active:not(.disabled),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):hover {
+        background-color: #111;
+    }
+
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td span.minute:not(.disabled):not(.active):hover,
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td.day.active:not(.disabled),
+    #sln-salon .datetimepicker.sln-datetimepicker table tr td.day:not(.disabled):hover {
+        background-color: #111;
+        color: #fff;
+    }
+
+    #sln-salon:not(.sln-customcolors) .sln-input input,
+    #sln-salon textarea.sln-input {
+
+        &:focus,
+        &:active,
+        &:hover {
+            outline-color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+
+    #sln-salon .sln-summary .sln-summary__tabs__nav__item {
+
+        &.active .sln-summary__tabs__toggle,
+        .sln-summary__tabs__toggle:hover {
+            color: $color-secondary;
+
+            &::before {
+                filter: invert(1);
+            }
+
+            &::after {
+                background-color: $color-secondary;
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: 599px) {
+
+        .sln-box__bottombar,
+        #sln-salon .sln-box__bottombar {
+            background-color: #f5e1b6;
+            background-color: hsl(41.5deg 78.1% 73.14% / 61%);
+        }
+
+        .sln-box__bottombar .sln-box__bottombar__fkbg,
+        #sln-salon .sln-box__bottombar .sln-box__bottombar__fkbg {
+
+            &,
+            &::before {
+                background-color: transparent;
+            }
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        #sln-salon.sln-salon--l {
+            max-width: 100%;
+        }
+    }
+}
