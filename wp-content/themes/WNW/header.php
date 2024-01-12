@@ -4,12 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Whiskey & Whiskers: Yours Complete Barber Solution</title>
-
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
-
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
