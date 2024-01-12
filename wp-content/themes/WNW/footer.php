@@ -1,8 +1,5 @@
 <footer class="main">
     <div class="container">
-        <!-- <a class="logo" href="/"><img src="<?php path_to('/assets/images/logo.png') ?>"
-                alt="Whiskey & Whiskers logo" /></a> -->
-
         <dl class="in-touch">
             <?php
             $contactPageID = get_page_by_path('contact-us')->ID;
@@ -13,9 +10,15 @@
                     <?php the_field('location', $contactPageID); ?>
                 </a>
             </dd>
-            <dd><a href="tel:<?php the_field('phone', $contactPageID); ?>">Phone: <?php the_field('phone', $contactPageID); ?></a></dd>
-            <dd><a href="mailto:<?php the_field('email', $contactPageID); ?>">Email: <?php the_field('email', $contactPageID); ?></a></dd>
-            <dd><?php the_field('opening_hours', $contactPageID);?></dd>
+            <dd><a href="tel:<?php the_field('phone', $contactPageID); ?>">Phone:
+                    <?php the_field('phone', $contactPageID); ?>
+                </a></dd>
+            <dd><a href="mailto:<?php the_field('email', $contactPageID); ?>">Email:
+                    <?php the_field('email', $contactPageID); ?>
+                </a></dd>
+            <dd>
+                <?php the_field('opening_hours', $contactPageID); ?>
+            </dd>
 
         </dl>
 

@@ -1,5 +1,4 @@
 jQuery(function ($) {
-
 	$('#hamburger img').on('click', function () {
 		var state = $('body').hasClass('open-menu');
 		$('body').toggleClass('open-menu', !state).toggleClass('close-menu', state);

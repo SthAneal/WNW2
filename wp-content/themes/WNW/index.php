@@ -99,9 +99,6 @@ get_header();
     </div>
     <?php endif; ?>
 
-
-
-
     <?php
     $args = array(
         'post_type' => 'products',
